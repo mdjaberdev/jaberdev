@@ -2,7 +2,7 @@ import Container from "../Container"
 import Flex from "../Flex"
 import Images from "../Images"
 // import logo from '../../assets/logo.png'
-import mlogo from '../../assets/jaLOgo-removebg-preview.png'
+import mlogo from '../../assets/geminiLogo.png'
 import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link";

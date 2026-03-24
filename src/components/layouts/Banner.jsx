@@ -14,7 +14,7 @@ const Banner = () => {
             <div className="absolute lg:inset-0 bg-[#FE9A00]/5 opacity-50"></div>
             <Container className={'w-[360px] lg:w-[1140px] lg:relative lg:z-10'}>
                 <div className='lg:grid lg:grid-cols-2 lg:justify-between lg:pt-10'>
-                    <div className="leftSide pt-10 lg:pt-55">
+                    <div className="leftSide pt-30 lg:pt-55">
                         <h2 className="font-bold text-[40px] text-white pb-0.5">Hey! I'm </h2>
                         <h1 className="text-[#FE9A00] font-bold text-[32px] lg:text-[40px]">
                             <Typewriter
