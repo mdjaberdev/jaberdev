@@ -13,7 +13,7 @@ import "swiper/css";
 const Reviews = () => {
   return (
     <div className="py-24 bg-[#1D293D] w-full">
-      <Container className="w-full px-4 max-w-[1140px] mx-auto">
+      <Container className="w-full px-4 xl:max-w-[1140px] mx-auto">
         {/* Title */}
         <div className="text-center mx-auto max-w-2xl">
           <h3 className="text-2xl text-white font-semibold">Client's Review</h3>

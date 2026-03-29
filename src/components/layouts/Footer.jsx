@@ -6,11 +6,12 @@ import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { Link } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 
 const Footer = () => {
   return (
-    <footer className="py-6 bg-[#0F172B] w-full">
-      <Container className="w-full px-4 lg:w-[1140px] mx-auto">
+    <footer className="py-3 bg-[#0F172B] w-full">
+      <Container className="w-full px-4 xl:w-[1140px] mx-auto">
         <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4 lg:gap-0 text-center">
           {/* logo */}
           <Link to="/">
@@ -51,6 +52,16 @@ const Footer = () => {
           </div>
         </div>
       </Container>
+       <div className="hidden lg:block">
+        <ScrollToTop
+          smooth
+          top="500"
+          height="20"
+          width="20"
+          color="white"
+          className="bg-green-500! h-15! w-15! flex! items-center! justify-center! rounded-full!"
+        />
+      </div>
     </footer>
   );
 };

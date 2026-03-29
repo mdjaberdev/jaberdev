@@ -34,7 +34,7 @@ const Contact = () => {
 
   return (
     <section className="py-24 bg-[#0F172B]/95 w-full" id="contact">
-      <Container className="w-full px-4 lg:w-[1140px] mx-auto">
+      <Container className="w-full px-4 xl:w-[1140px] mx-auto">
         {/* Header */}
         <div className="text-center mx-auto max-w-3xl">
           <h3 className="text-2xl lg:text-3xl font-semibold text-white">

@@ -14,7 +14,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-[#0F172B] py-5 w-full">
+    <div className="bg-[#0F172B] py-3 w-full">
       <Container className="max-w-[1140px] mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* logo */}

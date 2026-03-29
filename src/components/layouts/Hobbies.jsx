@@ -33,7 +33,7 @@ const Hobbies = () => {
   return (
     <div className="py-[95px] bg-[#0F172B] w-full">
 
-      <Container className="w-[360px] lg:w-[1140px]">
+      <Container className="w-[360px] xl:w-[1140px]">
 
         {/* title */}
         <div className="text-center max-w-[600px] mx-auto">
@@ -48,7 +48,7 @@ const Hobbies = () => {
         </div>
 
         {/* cards */}
-        <div className="pt-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="pt-[60px] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
           {hobbies.map((item, index) => (
             <div

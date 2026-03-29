@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../Container";
 import Images from "../Images";
-import about from "../../assets/about.png";
+import about from "../../assets/r4.png";
 import Button from "../Button";
 
 const Aboutme = () => {

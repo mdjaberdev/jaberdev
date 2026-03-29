@@ -1,7 +1,7 @@
 
 import Container from "../Container";
 import Images from "../Images";
-import bannerImg from "../../assets/bannerImg.png";
+import bannerImg from "../../assets/jaberBnr.png";
 import Button from "../Button";
 import { Typewriter } from "react-simple-typewriter";
 import { HashLink } from "react-router-hash-link";
@@ -10,9 +10,7 @@ const Banner = () => {
   return (
     <>
       <div id="banner" className="bg-[#0F172B] w-full relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#FE9A00]/5 opacity-50"></div>
-
-        {/* Changed w to max-w and added mx-auto */}
+        <div className="absolute inset-0 bg-[#FE9A00]/5 opacity-50 pointer-events-none"></div>
         <Container
           className={
             "w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1140px] mx-auto z-10 px-4"
@@ -24,8 +22,6 @@ const Banner = () => {
               <h2 className="font-bold text-[32px] lg:text-[40px] text-white pb-1">
                 Hey! I'm
               </h2>
-
-              {/* Removed fixed height or increased it to prevent overlap on small desktops */}
               <h1 className="text-[#FE9A00] font-bold text-[28px] lg:text-[40px] min-h-[50px] lg:min-h-[60px]">
                 <Typewriter
                   words={["Front-End Developer", "Md Jaber Hossain"]}
