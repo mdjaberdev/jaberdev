@@ -40,6 +40,11 @@ const Header = () => {
               </HashLink>
             </li>
             <li>
+              <HashLink smooth to="#skills">
+                Skills
+              </HashLink>
+            </li>
+            <li>
               <HashLink smooth to="#projects">
                 Projects
               </HashLink>

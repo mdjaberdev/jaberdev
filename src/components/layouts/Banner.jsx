@@ -24,10 +24,10 @@ const Banner = () => {
               </h2>
               <h1 className="text-[#FE9A00] font-bold text-[28px] lg:text-[40px] min-h-[50px] lg:min-h-[60px]">
                 <Typewriter
-                  words={["Front-End Developer", "Md Jaber Hossain"]}
+                  words={["Md Jaber Hossain", "Front-end Developer"]}
                   loop={true}
                   cursor
-                  cursorStyle="|"
+                  cursorStyle="👈"
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1000}

@@ -6,6 +6,7 @@ import Services from "../layouts/Services"
 import Projects from "../layouts/Projects"
 import Reviews from "../layouts/Reviews"
 import Contact from "../layouts/Contact"
+import Skills from "../layouts/Skills"
 
 
 
@@ -16,7 +17,7 @@ const Home = () => {
         <Aboutme/>
         <Hobbies/>
         <Services/>
-        {/* <Hireme/> */}
+         <Skills/>
         <Projects/>
         <Reviews/>
         <Contact/>
