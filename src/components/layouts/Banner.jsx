@@ -44,10 +44,7 @@ const Banner = () => {
                 <HashLink smooth to="#contact">
                   <Button btnText={"Hire Me"} />
                 </HashLink>
-                <a
-                  target="_blank"
-                  href="https://drive.google.com/file/d/1mEy0HCHUHTS99Q5ZRbom-LnXFFEaVEfU/view?usp=drive_link"
-                >
+                <a href="/resumeJaber.pdf" download={"resumeJaber.pdf"}>
                   <Button btnText={"Download CV"} />
                 </a>
               </div>
