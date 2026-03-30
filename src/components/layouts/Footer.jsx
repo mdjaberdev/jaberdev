@@ -1,6 +1,6 @@
 import Container from "../Container";
 import Flex from "../Flex";
-import mlogo from "../../assets/geminiLogo.png";
+import mlogo from "../../assets/gemini.png";
 import Images from "../Images";
 import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";

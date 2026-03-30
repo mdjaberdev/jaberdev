@@ -2,7 +2,7 @@
 import React from "react";
 import Container from "../Container";
 import orebi from "../../assets/orebi.png";
-import portfolio from "../../assets/portfolio.png";
+import portfolio from "../../assets/hancok.png";
 import game from "../../assets/Screenshot_1.png";
 import creative from "../../assets/creative.png";
 import Images from "../Images";
@@ -44,7 +44,7 @@ const Projects = () => {
 
               <p className="text-gray-400 mb-6">
                 A fully functional online store where you can view products.
-                <span className="text-green-500"> (Team Project)</span>
+                <span className="text-[#FE9A00]"> (Team Project)</span>
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
@@ -143,7 +143,7 @@ const Projects = () => {
 
             <div className="p-8">
               <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FE9A00]">
-                Portfolio
+                Hancok
               </h3>
 
               <p className="text-gray-400 mb-6">
@@ -152,12 +152,12 @@ const Projects = () => {
 
               <div className="flex flex-wrap gap-2 mb-8">
                 <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  JavaScript
+                  HTML
                 </span>
 
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  jQuery
-                </span>
+                {/* <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
+         
+                </span> */}
 
                 <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
                   CSS
@@ -166,7 +166,7 @@ const Projects = () => {
 
               <div className="flex items-center justify-between">
                 <a
-                  href="https://mdjaberdev.github.io/PortfolioTwo/"
+                  href="https://mdjaberdev.github.io/Hancok/"
                   className="hover:text-[#FE9A00] text-white duration-300 font-semibold text-sm flex items-center gap-2"
                 >
                   Live Preview
@@ -174,7 +174,7 @@ const Projects = () => {
                 </a>
 
                 <a
-                  href="https://github.com/mdjaberdev/PortfolioTwo"
+                  href="https://github.com/mdjaberdev/Hancok"
                   className="text-gray-400 text-xl hover:text-[#FE9A00]"
                 >
                   <BsGithub />

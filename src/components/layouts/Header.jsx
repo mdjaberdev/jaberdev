@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Container from "../Container";
 import Images from "../Images";
-import mlogo from "../../assets/geminiLogo.png";
+import mlogo from "../../assets/gemini.png";
 import { BsFacebook, BsGithub } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa6";
 import { Link } from "react-router-dom";

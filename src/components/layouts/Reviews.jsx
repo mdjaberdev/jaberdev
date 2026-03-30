@@ -34,6 +34,36 @@ const Reviews = () => {
               1024: { slidesPerView: 3, spaceBetween: 50 },
             }}
           >
+            {/* Slide 4 */}
+            <SwiperSlide>
+              <div className="px-2">
+                <div className="bg-[#0F172B] p-4 rounded-md">
+                  <Images imgSrc={review} />
+                  <p className="py-3 text-[#90A1B9] text-sm min-h-[140px]">
+                    He brings fresh ideas to the table. Beyond just writing
+                    code, he improved our user experience significantly. A
+                    proactive developer who actually cares about the product.
+                  </p>
+                  <div className="flex gap-2 text-[#FE9A00]">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </div>
+                </div>
+                <div className="pt-5 text-center">
+                  <Images
+                    imgSrc={r4}
+                    className="h-20 w-20 rounded-full mx-auto"
+                  />
+                  <h4 className="text-white font-medium text-sm pt-2">
+                    Majharul Islam
+                  </h4>
+                  <p className="text-[#90A1B9] text-sm">CEO</p>
+                </div>
+              </div>
+            </SwiperSlide>
             {/* Slide 1 */}
             <SwiperSlide>
               <div className="px-2">
@@ -122,37 +152,6 @@ const Reviews = () => {
                   />
                   <h4 className="text-white font-medium text-sm pt-2">
                     Mesbaul Haque Rafi
-                  </h4>
-                  <p className="text-[#90A1B9] text-sm">CEO</p>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 4 */}
-            <SwiperSlide>
-              <div className="px-2">
-                <div className="bg-[#0F172B] p-4 rounded-md">
-                  <Images imgSrc={review} />
-                  <p className="py-3 text-[#90A1B9] text-sm min-h-[140px]">
-                    He brings fresh ideas to the table. Beyond just writing
-                    code, he improved our user experience significantly. A
-                    proactive developer who actually cares about the product.
-                  </p>
-                  <div className="flex gap-2 text-[#FE9A00]">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </div>
-                </div>
-                <div className="pt-5 text-center">
-                  <Images
-                    imgSrc={r4}
-                    className="h-20 w-20 rounded-full mx-auto"
-                  />
-                  <h4 className="text-white font-medium text-sm pt-2">
-                    Majharul
                   </h4>
                   <p className="text-[#90A1B9] text-sm">CEO</p>
                 </div>

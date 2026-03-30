@@ -5,6 +5,7 @@ import bannerImg from "../../assets/jaberBnr.png";
 import Button from "../Button";
 import { Typewriter } from "react-simple-typewriter";
 import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -43,7 +44,12 @@ const Banner = () => {
                 <HashLink smooth to="#contact">
                   <Button btnText={"Hire Me"} />
                 </HashLink>
-                <Button btnText={"Download CV"} />
+                <a
+                  target="_blank"
+                  href="https://drive.google.com/drive/u/0/folders/1qFlKiTVbU78POyqms5yEEC2LYErOoqPC"
+                >
+                  <Button btnText={"Download CV"} />
+                </a>
               </div>
             </div>
 
