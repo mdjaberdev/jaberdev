@@ -46,7 +46,7 @@ const Banner = () => {
                 </HashLink>
                 <a
                   target="_blank"
-                  href="https://drive.google.com/file/d/1mEy0HCHUHTS99Q5ZRbom-LnXFFEaVEfU/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1mEy0HCHUHTS99Q5ZRbom-LnXFFEaVEfU/view?usp=drive_link"
                 >
                   <Button btnText={"Download CV"} />
                 </a>
