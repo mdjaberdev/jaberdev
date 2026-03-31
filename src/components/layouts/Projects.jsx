@@ -2,7 +2,7 @@
 import React from "react";
 import Container from "../Container";
 import orebi from "../../assets/orebi.png";
-import hancok from "../../assets/hancok.png";
+import portfolio from "../../assets/portfolio.png";
 import game from "../../assets/game.png";
 import creative from "../../assets/creative.png";
 import Images from "../Images";
@@ -135,7 +135,7 @@ const Projects = () => {
           <div className="group bg-[#1e293b]/20 border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
             <div className="h-60 overflow-hidden relative">
               <Images
-                imgSrc={hancok}
+                imgSrc={portfolio}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
