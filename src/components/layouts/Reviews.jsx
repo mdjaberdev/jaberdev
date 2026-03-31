@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 import r1 from "../../assets/r1.png";
 import r2 from "../../assets/r2.png";
 import r3 from "../../assets/r3.png";
-import r4 from "../../assets/majhR-modified.png";
+import r4 from "../../assets/r4.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

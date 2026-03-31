@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "../Container";
 import Images from "../Images";
-import about from "../../assets/r4.png";
+import jaber from "../../assets/jaberImg.png";
 import Button from "../Button";
 
 
@@ -21,7 +21,7 @@ const Aboutme = () => {
             {/* Left Image Section */}
             <div className="left lg:w-[40%] flex justify-center lg:sticky lg:top-10">
               <Images
-                imgSrc={about}
+                imgSrc={jaber}
                 className="w-[260px] sm:w-[320px] lg:w-full max-w-md object-contain rounded-lg"
               />
             </div>
@@ -29,7 +29,7 @@ const Aboutme = () => {
             {/* Right Content Section */}
             <div className="right lg:w-[55%] mt-10 lg:mt-0 text-center lg:text-left">
               <h3 className="font-bold text-[32px] lg:text-[42px] text-white leading-tight">
-               Md Jaber Hossain
+                Md Jaber Hossain
               </h3>
               <p className="text-[#E2E8F0] font-medium text-[19px] mt-2 italic">
                 Frontend Developer (React.js & Next.js)

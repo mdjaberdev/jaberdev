@@ -52,14 +52,14 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-       <div className="hidden lg:block">
+      <div className="hidden lg:block">
         <ScrollToTop
           smooth
           top="500"
           height="20"
           width="20"
           color="white"
-          className="bg-green-500! h-15! w-15! flex! items-center! justify-center! rounded-full!"
+          className="bg-[#FE9A00]! h-15! w-15! flex! items-center! justify-center! rounded-full!"
         />
       </div>
     </footer>

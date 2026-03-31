@@ -1,10 +1,10 @@
 
 import React from "react";
 import Container from "../Container";
-import orebi from "../../assets/orebi.png";
-import hancok from "../../assets/hancok.png";
-import game from "../../assets/Screenshot_1.png";
-import creative from "../../assets/creative.png";
+import orebi from "/src/assets/orebi.png";
+import hancok from "/src/assets/hancok.png";
+import game from "/src/assets/game.png";
+import creative from "/src/assets/creative.png";
 import Images from "../Images";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
