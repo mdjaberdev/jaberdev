@@ -1,6 +1,6 @@
 import Container from "../Container";
 import Flex from "../Flex";
-import Gemini from '/src/assets/Gemini.png'
+import logo from '/src/assets/logoOne.png'
 import Images from "../Images";
 import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4 lg:gap-0 text-center">
           {/* logo */}
           <Link to="/">
-            <Images imgSrc={Gemini} className="w-20" />
+            <Images imgSrc={logo} className="w-20" />
           </Link>
 
           {/* Text */}
