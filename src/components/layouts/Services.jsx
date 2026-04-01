@@ -49,13 +49,14 @@ const Services = () => {
       <Container className="mx-auto w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1140px] px-4">
         {/* title */}
         <div className="text-center max-w-[600px] mx-auto">
-          <h3 className="text-[24px] text-white font-semibold">
+          <h3 className="text-2xl lg:text-3xl font-semibold text-white">
             What do I offer?
           </h3>
 
           <p className="text-[#90A1B9] text-[15px] pt-6">
-            Obviously I'm a Web Designer. Web Developer with over 7 years of
-            experience. Experienced with all stages of the development.
+            I’m a Frontend Developer who builds responsive and modern web
+            interfaces by converting Figma designs into clean and
+            high-performance code.
           </p>
         </div>
 
@@ -72,9 +73,7 @@ const Services = () => {
                 {item.title}
               </h4>
 
-              <p className="text-[15px] text-[#90A1B9] py-3">
-                {item.desc}
-              </p>
+              <p className="text-[15px] text-[#90A1B9] py-3">{item.desc}</p>
 
               {/* <button className="text-[15px] flex items-center text-white cursor-pointer gap-x-2 group">
                 Read More

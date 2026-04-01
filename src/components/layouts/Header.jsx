@@ -27,7 +27,7 @@ const Header = () => {
           {/* desktop menu */}
           <ul className="hidden lg:flex gap-x-8 text-[15px] text-white/70 font-medium">
             <li>
-              <HashLink smooth to="#header">
+              <HashLink smooth to="#banner">
                 Home
               </HashLink>
             </li>

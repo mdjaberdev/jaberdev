@@ -6,6 +6,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
 import Button from "../Button";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
   const form = useRef();
@@ -18,15 +19,15 @@ const Contact = () => {
         "service_22n2f6a",
         "template_4dlh5cf",
         form.current,
-        "y7o7ZXi1gyIaKWOLJ",
+        "96VcsuELGflgAzir_",
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+         toast.success("Successfully Mail.!");
           form.current.reset();
         },
         (error) => {
-          alert("Something went wrong. Please try again.");
+            toast.success("This didn't work.!");
           console.error("FAILED...", error.text);
         },
       );
@@ -34,6 +35,7 @@ const Contact = () => {
 
   return (
     <section className="py-24 bg-[#0F172B]/95 w-full" id="contact">
+      <Toaster />
       <Container className="w-full px-4 xl:w-[1140px] mx-auto">
         {/* Header */}
         <div className="text-center mx-auto max-w-3xl">

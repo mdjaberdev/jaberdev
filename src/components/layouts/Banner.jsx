@@ -11,7 +11,7 @@ const Banner = () => {
   return (
     <>
     <section id="banner">
-      <div className="bg-[#0F172B] w-full relative overflow-hidden pt-50 pb-25">
+      <div className="bg-[#0F172B] w-full relative overflow-hidden py-20  lg:pt-50 lg:pb-25">
         <div className="absolute inset-0 bg-[#FE9A00]/5 opacity-50 pointer-events-none"></div>
         <Container
           className={

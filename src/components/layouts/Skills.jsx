@@ -38,10 +38,10 @@ const Skills = () => {
       <Container className="w-full max-w-[360px] md:max-w-[720px] xl:max-w-[1140px] mx-auto px-4">
         {/* Title */}
         <div className="text-center max-w-[600px] mx-auto mb-16">
-          <h3 className="text-[28px] lg:text-[32px] text-white font-bold">
-            Technical <span className="text-[#FE9A00]">Skills</span>
+          <h3 className="text-2xl lg:text-3xl font-semibold text-white">
+            Technical Skills
           </h3>
-      
+
           <p className="text-[#90A1B9] text-[15px] pt-6">
             The tools and technologies I use to bring ideas to life on the web.
           </p>

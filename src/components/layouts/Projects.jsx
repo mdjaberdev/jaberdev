@@ -12,10 +12,10 @@ import { BsGithub } from "react-icons/bs";
 const Projects = () => {
   return (
     <section id="projects" className="py-[95px] bg-[#1D293D] w-full">
-      <Container className="w-full max-w-[360px] md:max-w-[720px] xl:max-w-[1140px] mx-auto px-4">
+      <Container className="w-full  md:max-w-[720px] xl:max-w-[1140px] mx-auto px-3">
         {/* title */}
         <div className="text-center max-w-[600px] mx-auto">
-          <h3 className="text-[24px] text-white font-semibold">
+          <h3 className="text-2xl lg:text-3xl font-semibold text-white">
             My Work & Projects
           </h3>
 
@@ -43,21 +43,22 @@ const Projects = () => {
               </h3>
 
               <p className="text-gray-400 mb-6">
-                A fully functional online store where you can view products.
+                A dynamic and responsive website built with HTML, Tailwind CSS,
+                and vanilla JavaScript to create interactive user experiences.
                 <span className="text-[#FE9A00]"> (Team Project)</span>
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
                 <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  React
+                  HTML
                 </span>
 
                 <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Tailwind CSS
+                  Tailwind
                 </span>
 
                 <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Context API
+                  Vanilla JavaScript
                 </span>
               </div>
 
@@ -95,7 +96,9 @@ const Projects = () => {
               </h3>
 
               <p className="text-gray-400 mb-6">
-                A fully functional online store where you can view products.
+                A modern e-commerce web application developed with React,
+                Tailwind CSS, and Context API, featuring responsive design and
+                interactive product browsing.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
@@ -104,7 +107,7 @@ const Projects = () => {
                 </span>
 
                 <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Tailwind CSS
+                  Tailwind
                 </span>
 
                 <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
@@ -147,7 +150,8 @@ const Projects = () => {
               </h3>
 
               <p className="text-gray-400 mb-6">
-                A modern landing page for Ui/Ux Designer.
+                A one-page gaming website built using HTML and CSS, featuring
+                engaging UI elements and interactive sections.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
@@ -199,7 +203,9 @@ const Projects = () => {
               </h3>
 
               <p className="text-gray-400 mb-6">
-                A simple funny game for entertainment.
+                A fun and interactive number guessing game created with
+                JavaScript and Tailwind CSS, featuring dynamic UI elements and
+                immediate feedback for the player.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-8">
