@@ -11,7 +11,7 @@ import { BsGithub } from "react-icons/bs";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-[95px] bg-[#0F172B] w-full">
+    <section id="projects" className="py-[95px] bg-[#1D293D] w-full">
       <Container className="w-full max-w-[360px] md:max-w-[720px] xl:max-w-[1140px] mx-auto px-4">
         {/* title */}
         <div className="text-center max-w-[600px] mx-auto">
@@ -28,7 +28,7 @@ const Projects = () => {
         {/* project cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-8 mt-15">
           {/* project 1 */}
-          <div className="group bg-[#1e293b]/20 border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
+          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
             <div className="h-60 overflow-hidden relative">
               <Images
                 imgSrc={creative}
@@ -79,8 +79,8 @@ const Projects = () => {
               </div>
             </div>
           </div>
-          {/* project 1 */}
-          <div className="group bg-[#1e293b]/20 border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
+          {/* project 2 */}
+          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
             <div className="h-60 overflow-hidden relative">
               <Images
                 imgSrc={orebi}
@@ -131,8 +131,8 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* project 2 */}
-          <div className="group bg-[#1e293b]/20 border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
+          {/* project 3 */}
+          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
             <div className="h-60 overflow-hidden relative">
               <Images
                 imgSrc={portfolio}
@@ -183,8 +183,8 @@ const Projects = () => {
             </div>
           </div>
 
-          {/* project 3 */}
-          <div className="group bg-[#1e293b]/20 border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
+          {/* project 4 */}
+          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
             <div className="h-60 overflow-hidden relative">
               <Images
                 imgSrc={game}

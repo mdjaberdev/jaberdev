@@ -13,28 +13,28 @@ import { SiTailwindcss, SiJavascript, SiNextdotjs } from "react-icons/si";
 
 const Skills = () => {
   const skillsData = [
-    { name: "HTML5", icon: <FaHtml5 />, color: "hover:text-[#E34F26]" },
-    { name: "CSS3", icon: <FaCss3Alt />, color: "hover:text-[#1572B6]" },
-    { name: "Bootstrap", icon: <FaBootstrap />, color: "hover:text-[#7952B3]" },
+    { name: "HTML5", icon: <FaHtml5 />, color: "group-hover:text-[#E34F26]" },
+    { name: "CSS3", icon: <FaCss3Alt />, color: "group-hover:text-[#1572B6]" },
+    { name: "Bootstrap", icon: <FaBootstrap />, color: "group-hover:text-[#7952B3]" },
     {
       name: "Tailwind CSS",
       icon: <SiTailwindcss />,
-      color: "hover:text-[#06B6D4]",
+      color: "group-hover:text-[#06B6D4]",
     },
     {
       name: "JavaScript",
       icon: <SiJavascript />,
-      color: "hover:text-[#F7DF1E]",
+      color: "group-hover:text-[#F7DF1E]",
     },
-    { name: "React", icon: <FaReact />, color: "hover:text-[#61DAFB]" },
-    { name: "Next.js", icon: <SiNextdotjs />, color: "hover:text-white" },
-    { name: "Git", icon: <FaGitAlt />, color: "hover:text-[#F05032]" },
-    { name: "GitHub", icon: <FaGithub />, color: "hover:text-white" },
-    { name: "Figma", icon: <FaFigma />, color: "hover:text-[#F24E1E]" },
+    { name: "React", icon: <FaReact />, color: "group-hover:text-[#61DAFB]" },
+    { name: "Next.js", icon: <SiNextdotjs />, color: "group-hover:text-white" },
+    { name: "Git", icon: <FaGitAlt />, color: "group-hover:text-[#F05032]" },
+    { name: "GitHub", icon: <FaGithub />, color: "group-hover:text-white" },
+    { name: "Figma", icon: <FaFigma />, color: "group-hover:text-[#F24E1E]" },
   ];
 
   return (
-    <section id="skills" className="pb-[90px] bg-[#1D293D] w-full">
+    <section id="skills" className="pb-[90px] bg-[#0F172B]/98 w-full py-25">
       <Container className="w-full max-w-[360px] md:max-w-[720px] xl:max-w-[1140px] mx-auto px-4">
         {/* Title */}
         <div className="text-center max-w-[600px] mx-auto mb-16">

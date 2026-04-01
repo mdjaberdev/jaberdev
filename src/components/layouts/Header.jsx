@@ -8,24 +8,26 @@ import { FaLinkedin } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { HiMenu, HiX } from "react-icons/hi";
+import Logo from "../Logo";
 
 const Header = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-[#0F172B] py-3 w-full">
+    <header className="bg-[#0F172B] py-3 w-full fixed top-0 left-0 z-999" id="header">
       <Container className="max-w-[1140px] mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* logo */}
           <Link to="/">
-            <Images imgSrc={logo} className="w-20" />
+            {/* <Images imgSrc={logo} className="w-20" /> */}
+            <Logo/>
           </Link>
 
           {/* desktop menu */}
           <ul className="hidden lg:flex gap-x-8 text-[15px] text-white/70 font-medium">
             <li>
-              <HashLink smooth to="#banner">
+              <HashLink smooth to="#header">
                 Home
               </HashLink>
             </li>
@@ -113,7 +115,7 @@ const Header = () => {
           </div>
         )}
       </Container>
-    </div>
+    </header>
   );
 };
 

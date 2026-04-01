@@ -10,14 +10,15 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <>
-      <div id="banner" className="bg-[#0F172B] w-full relative overflow-hidden">
+    <section id="banner">
+      <div className="bg-[#0F172B] w-full relative overflow-hidden pt-50 pb-25">
         <div className="absolute inset-0 bg-[#FE9A00]/5 opacity-50 pointer-events-none"></div>
         <Container
           className={
             "w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1140px] mx-auto z-10 px-4"
           }
         >
-          <div className="lg:grid lg:grid-cols-2 items-center gap-8 lg:pt-10">
+          <div className="lg:grid lg:grid-cols-2 items-center gap-8">
             {/* left side */}
             <div className="leftSide pt-10 lg:pt-0 text-center lg:text-left">
               <h2 className="font-bold text-[32px] lg:text-[40px] text-white pb-1">
@@ -28,7 +29,7 @@ const Banner = () => {
                   words={["Md Jaber Hossain", "Front-end Developer"]}
                   loop={true}
                   cursor
-                  cursorStyle="👈"
+                  cursorStyle="|"
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1000}
@@ -40,13 +41,10 @@ const Banner = () => {
                 to learn, explore, and collaborate.
               </p>
 
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mt-2.5">
                 <HashLink smooth to="#contact">
                   <Button btnText={"Hire Me"} />
                 </HashLink>
-                <a href="/resumeJaber.pdf" download="resumeJaber.pdf">
-                  <Button btnText={"Download Resume"} />
-                </a>
               </div>
             </div>
 
@@ -60,6 +58,7 @@ const Banner = () => {
           </div>
         </Container>
       </div>
+      </section>
     </>
   );
 };

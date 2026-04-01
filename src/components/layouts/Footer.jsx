@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
+import Logo from "../Logo";
 
 const Footer = () => {
   return (
@@ -15,7 +16,8 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4 lg:gap-0 text-center">
           {/* logo */}
           <Link to="/">
-            <Images imgSrc={logo} className="w-20" />
+            {/* <Images imgSrc={logo} className="w-20" /> */}
+            <Logo/>
           </Link>
 
           {/* Text */}
@@ -59,7 +61,7 @@ const Footer = () => {
           height="20"
           width="20"
           color="white"
-          className="bg-[#FE9A00]! h-15! w-15! flex! items-center! justify-center! rounded-full!"
+          className="bg-[#FE9A00]! h-12! w-12! flex! items-center! justify-center! rounded-full! font-bold!"
         />
       </div>
     </footer>
