@@ -1,6 +1,6 @@
 import Container from "../Container";
 import Flex from "../Flex";
-import logo from '/src/assets/logoOne.png'
+import logo from "/src/assets/logoOne.png";
 import Images from "../Images";
 import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
@@ -8,8 +8,33 @@ import { SiGmail } from "react-icons/si";
 import { Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import Logo from "../Logo";
+import { useLenis } from "lenis/react";
+import { useState, useEffect } from "react";
+import { FaArrowUp } from "react-icons/fa6";
 
 const Footer = () => {
+  const lenis = useLenis();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 500) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const handleScrollToTop = () => {
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
   return (
     <footer className="py-3 bg-[#0F172B] w-full">
       <Container className="w-full px-4 xl:w-[1140px] mx-auto">
@@ -17,7 +42,7 @@ const Footer = () => {
           {/* logo */}
           <Link to="/">
             {/* <Images imgSrc={logo} className="w-20" /> */}
-            <Logo/>
+            <Logo />
           </Link>
 
           {/* Text */}
@@ -54,16 +79,17 @@ const Footer = () => {
           </div>
         </div>
       </Container>
-      <div className="hidden lg:block">
-        <ScrollToTop
-          smooth
-          top="500"
-          height="20"
-          width="20"
-          color="white"
-          className="bg-[#FE9A00]! h-12! w-12! flex! items-center! justify-center! rounded-full! font-bold!"
-        />
-      </div>
+      {/* bottom to top button */}
+      {isVisible && (
+        <div className="fixed bottom-10 right-10 z-50">
+          <button
+            onClick={handleScrollToTop}
+            className="bg-[#FE9A00] h-12 w-12 flex items-center justify-center rounded-full cursor-pointer transition-colors duration-300 shadow-lg border-none outline-none"
+          >
+            <FaArrowUp className="text-white text-lg" />
+          </button>
+        </div>
+      )}
     </footer>
   );
 };
