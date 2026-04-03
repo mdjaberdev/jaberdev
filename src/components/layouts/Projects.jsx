@@ -5,6 +5,8 @@ import orebi from "../../assets/orebi.png";
 import portfolio from "../../assets/portfolio.png";
 import game from "../../assets/game.png";
 import creative from "../../assets/creative.png";
+import lime from "../../assets/lime.png";
+import nirvoya from "../../assets/nirvoya.png";
 import Images from "../Images";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
@@ -26,214 +28,179 @@ const Projects = () => {
         </div>
 
         {/* project cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-8 mt-15">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 mt-15">
           {/* project 1 */}
-          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
-            <div className="h-60 overflow-hidden relative">
-              <Images
-                imgSrc={creative}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
-            </div>
+          <div className="group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg">
+            {/* Project Image */}
+            <Images
+              imgSrc={creative}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
 
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FE9A00] duration-300">
-                Creative IT ( Web & Software )
-              </h3>
+            {/* Overlay with buttons on hover */}
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                target="_blank"
+                href="https://creative-web-six.vercel.app/"
+                className="px-4 py-2 bg-[#FE9A00] text-white font-semibold rounded flex items-center gap-2 hover:bg-yellow-500 transition-colors duration-300"
+              >
+                Live Preview
+                <FaArrowUpRightFromSquare />
+              </a>
 
-              <p className="text-gray-400 mb-6">
-                A dynamic and responsive website built with HTML, Tailwind CSS,
-                and vanilla JavaScript to create interactive user experiences.
-                <span className="text-[#FE9A00]"> (Team Project)</span>
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  HTML
-                </span>
-
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Tailwind
-                </span>
-
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Vanilla JavaScript
-                </span>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <a
-                  href="https://creative-web-six.vercel.app/"
-                  className="hover:text-[#FE9A00] text-white duration-300 font-semibold text-sm flex items-center gap-2"
-                >
-                  Live Preview
-                  <FaArrowUpRightFromSquare />
-                </a>
-
-                <a
-                  href="https://github.com/mdjaberdev/creativeWeb"
-                  className="text-gray-400 text-xl hover:text-[#FE9A00] transition-colors duration-300"
-                >
-                  <BsGithub />
-                </a>
-              </div>
+              <a
+                target="_blank"
+                href="https://github.com/mdjaberdev/creativeWeb"
+                className="px-4 py-2 bg-gray-800 text-white font-semibold rounded flex items-center gap-2 hover:bg-gray-700 transition-colors duration-300"
+              >
+                GitHub
+                <BsGithub />
+              </a>
             </div>
           </div>
           {/* project 2 */}
-          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
-            <div className="h-60 overflow-hidden relative">
-              <Images
-                imgSrc={orebi}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
-            </div>
+          <div className="group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg">
+            {/* Project Image */}
+            <Images
+              imgSrc={orebi}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
 
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FE9A00] duration-300">
-                E-Commerce Website
-              </h3>
+            {/* Overlay with buttons on hover */}
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                target="_blank"
+                href="https://e-commerce-six-liard.vercel.app/"
+                className="px-4 py-2 bg-[#FE9A00] text-white font-semibold rounded flex items-center gap-2 hover:bg-yellow-500 transition-colors duration-300"
+              >
+                Live Preview
+                <FaArrowUpRightFromSquare />
+              </a>
 
-              <p className="text-gray-400 mb-6">
-                A modern e-commerce web application developed with React,
-                Tailwind CSS, and Context API, featuring responsive design and
-                interactive product browsing.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  React
-                </span>
-
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Tailwind
-                </span>
-
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Context API
-                </span>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <a
-                  href="https://e-commerce-six-liard.vercel.app/"
-                  className="hover:text-[#FE9A00] text-white duration-300 font-semibold text-sm flex items-center gap-2"
-                >
-                  Live Preview
-                  <FaArrowUpRightFromSquare />
-                </a>
-
-                <a
-                  href="https://github.com/mdjaberdev/e-Commerce"
-                  className="text-gray-400 text-xl hover:text-[#FE9A00] transition-colors duration-300"
-                >
-                  <BsGithub />
-                </a>
-              </div>
+              <a
+                target="_blank"
+                href="https://github.com/mdjaberdev/e-Commerce"
+                className="px-4 py-2 bg-gray-800 text-white font-semibold rounded flex items-center gap-2 hover:bg-gray-700 transition-colors duration-300"
+              >
+                GitHub
+                <BsGithub />
+              </a>
             </div>
           </div>
 
           {/* project 3 */}
-          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
-            <div className="h-60 overflow-hidden relative">
-              <Images
-                imgSrc={portfolio}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
-            </div>
+          <div className="group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg">
+            {/* Project Image */}
+            <Images
+              imgSrc={portfolio}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
 
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FE9A00]">
-                Hancok
-              </h3>
+            {/* Overlay with buttons on hover */}
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                target="_blank"
+                href="https://mdjaberdev.github.io/Hancok/"
+                className="px-4 py-2 bg-[#FE9A00] text-white font-semibold rounded flex items-center gap-2 hover:bg-yellow-500 transition-colors duration-300"
+              >
+                Live Preview
+                <FaArrowUpRightFromSquare />
+              </a>
 
-              <p className="text-gray-400 mb-6">
-                A one-page gaming website built using HTML and CSS, featuring
-                engaging UI elements and interactive sections.
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  HTML
-                </span>
-
-                {/* <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-         
-                </span> */}
-
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  CSS
-                </span>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <a
-                  href="https://mdjaberdev.github.io/Hancok/"
-                  className="hover:text-[#FE9A00] text-white duration-300 font-semibold text-sm flex items-center gap-2"
-                >
-                  Live Preview
-                  <FaArrowUpRightFromSquare />
-                </a>
-
-                <a
-                  href="https://github.com/mdjaberdev/Hancok"
-                  className="text-gray-400 text-xl hover:text-[#FE9A00]"
-                >
-                  <BsGithub />
-                </a>
-              </div>
+              <a
+                target="_blank"
+                href="https://github.com/mdjaberdev/Hancok"
+                className="px-4 py-2 bg-gray-800 text-white font-semibold rounded flex items-center gap-2 hover:bg-gray-700 transition-colors duration-300"
+              >
+                GitHub
+                <BsGithub />
+              </a>
             </div>
           </div>
 
           {/* project 4 */}
-          <div className="group bg-[#0F172B] border border-white/5 rounded-2xl overflow-hidden hover:border-[#FE9A00]/50 transition-all duration-300 hover:-translate-y-2">
-            <div className="h-60 overflow-hidden relative">
-              <Images
-                imgSrc={game}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+          <div className="group relative w-full h-60 rounded-2xl overflow-hidden shadow-lg">
+            {/* Project Image */}
+            <Images
+              imgSrc={game}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+
+            {/* Overlay with buttons on hover */}
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                target="_blank"
+                href="https://mdjaberdev.github.io/domFunGame/"
+                className="px-4 py-2 bg-[#FE9A00] text-white font-semibold rounded flex items-center gap-2 hover:bg-yellow-500 transition-colors duration-300"
+              >
+                Live Preview
+                <FaArrowUpRightFromSquare />
+              </a>
+
+              <a
+                target="_blank"
+                href="https://github.com/mdjaberdev/domFunGame"
+                className="px-4 py-2 bg-gray-800 text-white font-semibold rounded flex items-center gap-2 hover:bg-gray-700 transition-colors duration-300"
+              >
+                GitHub
+                <BsGithub />
+              </a>
             </div>
+          </div>
+          {/* project  */}
+          <div className="group relative w-full h-60 overflow-hidden rounded-2xl shadow-lg">
+            <Images
+              imgSrc={lime}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
 
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-[#FE9A00]">
-                Number Guessing Game
-              </h3>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                target="_blank"
+                href="https://lime-ten.vercel.app/"
+                className="px-4 py-2 bg-[#FE9A00] text-white font-semibold rounded hover:bg-yellow-500 transition-colors duration-300 flex items-center gap-2"
+              >
+                Live Preview
+                <FaArrowUpRightFromSquare />
+              </a>
 
-              <p className="text-gray-400 mb-6">
-                A fun and interactive number guessing game created with
-                JavaScript and Tailwind CSS, featuring dynamic UI elements and
-                immediate feedback for the player.
-              </p>
+              <a
+                target="_blank"
+                href="https://github.com/mdjaberdev/lime"
+                className="px-4 py-2 bg-gray-800 text-white font-semibold rounded hover:bg-gray-700 transition-colors duration-300 flex items-center gap-2"
+              >
+                GitHub
+                <BsGithub />
+              </a>
+            </div>
+          </div>
+          {/* project 6 */}
+          <div className="group relative w-full h-60 overflow-hidden rounded-2xl shadow-lg">
+            <Images
+              imgSrc={nirvoya}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
 
-              <div className="flex flex-wrap gap-2 mb-8">
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  JavaScript
-                </span>
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a
+                target="_blank"
+                href="https://project-nirvoya-chi.vercel.app/"
+                className="px-4 py-2 bg-[#FE9A00] text-white font-semibold rounded hover:bg-yellow-500 transition-colors duration-300 flex items-center gap-2"
+              >
+                Live Preview
+                <FaArrowUpRightFromSquare />
+              </a>
 
-                <span className="px-3 py-1 bg-[#FE9A00]/10 text-[#FE9A00] text-xs font-semibold rounded-full border border-[#FE9A00]/20">
-                  Tailwind
-                </span>
-              </div>
-
-              <div className="flex items-center justify-between">
-                <a
-                  href="https://mdjaberdev.github.io/domFunGame/"
-                  className="hover:text-[#FE9A00] text-white duration-300 font-semibold text-sm flex items-center gap-2"
-                >
-                  Live Preview
-                  <FaArrowUpRightFromSquare />
-                </a>
-
-                <a
-                  href="https://github.com/mdjaberdev/domFunGame"
-                  className="text-gray-400 text-xl hover:text-[#FE9A00]"
-                >
-                  <BsGithub />
-                </a>
-              </div>
+              <a
+                target="_blank"
+                href="https://github.com/mdjaberdev/projectNirvoya"
+                className="px-4 py-2 bg-gray-800 text-white font-semibold rounded hover:bg-gray-700 transition-colors duration-300 flex items-center gap-2"
+              >
+                GitHub
+                <BsGithub />
+              </a>
             </div>
           </div>
         </div>
