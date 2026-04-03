@@ -15,44 +15,47 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#0F172B] py-3 w-full fixed top-0 left-0 z-999" id="header">
+    <header
+      className="bg-[#0F172B] py-3 w-full fixed top-0 left-0 z-999"
+      id="header"
+    >
       <Container className="max-w-[1140px] mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* logo */}
           <Link to="/">
             {/* <Images imgSrc={logo} className="w-20" /> */}
-            <Logo/>
+            <Logo />
           </Link>
 
           {/* desktop menu */}
           <ul className="hidden lg:flex gap-x-8 text-[15px] text-white/70 font-medium">
             <li>
-              <HashLink smooth to="#banner">
+              <HashLink smooth to="#banner" className="menuLi">
                 Home
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="#about">
+              <HashLink smooth to="#about" className="menuLi">
                 About
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="#services">
+              <HashLink smooth to="#services" className="menuLi">
                 Services
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="#skills">
+              <HashLink smooth to="#skills" className="menuLi">
                 Skills
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="#projects">
+              <HashLink smooth to="#projects" className="menuLi">
                 Projects
               </HashLink>
             </li>
             <li>
-              <HashLink smooth to="#contact">
+              <HashLink smooth to="#contact" className="menuLi">
                 Contact
               </HashLink>
             </li>
