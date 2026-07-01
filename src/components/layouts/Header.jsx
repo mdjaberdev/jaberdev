@@ -83,11 +83,19 @@ const Header = () => {
         </div>
 
         <div
-          className={`lg:hidden fixed inset-y-0 right-0 w-[280px] bg-[#0F172B]/95 backdrop-blur-lg border-l border-slate-800/80 p-8 pt-24 shadow-2xl transition-transform duration-500 ease-in-out z-40 flex flex-col justify-between ${
+          className={`lg:hidden fixed inset-y-0 right-0 w-[290px] h-screen bg-[#0F172B]/85 backdrop-blur-xl border-l border-white/10 p-6 pt-24 shadow-[-10px_0_40px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-in-out flex flex-col justify-between z-[9999]  ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <ul className="flex flex-col gap-y-6 text-white font-medium text-lg">
+          <button
+            aria-label="Close Menu"
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-5 right-5 text-[#FE9A00] text-2xl p-2 rounded-xl bg-white/5 border border-white/10 active:scale-95 transition-all duration-300 cursor-pointer "
+          >
+            <HiX />
+          </button>
+
+          <ul className="flex flex-col gap-y-3">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <HashLink
@@ -97,36 +105,41 @@ const Header = () => {
                     if (item.action) item.action();
                     setMenuOpen(false);
                   }}
-                  className="block py-2 hover:text-[#FE9A00] transition-colors duration-200 border-b border-slate-900/60"
+                  className="flex items-center gap-4 px-4 py-3 text-slate-300 font-medium text-[16px] rounded-xl border border-transparent hover:text-white hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/20 transition-all duration-300 group"
                 >
-                  {item.label}
+                  <span className="text-xl text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
+                    {item.icon}
+                  </span>
+                  <span>{item.label}</span>
                 </HashLink>
               </li>
             ))}
           </ul>
-
-          <div className="flex gap-x-4 border-t border-slate-800 pt-6 justify-center">
+          {/* Premium Mobile Social Action Box */}
+          <div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-6">
             <a
               href="https://github.com/mdjaberdev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-slate-400 hover:text-white transition-colors"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-[#FE9A00]/20 hover:border-[#FE9A00]/30 transition-all duration-300 text-sm font-medium"
             >
-              <BsGithub />
+              <BsGithub className="text-lg" />
+              <span>GitHub</span>
             </a>
             <a
               href="https://www.linkedin.com/in/mdjaberdev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl text-slate-400 hover:text-[#0077B5] transition-colors"
+              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-[#0077B5] hover:bg-[#0077B5]/20 hover:border-[#0077B5]/30 transition-all duration-300 text-sm font-medium"
             >
-              <FaLinkedin />
+              <FaLinkedin className="text-lg" />
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>
         {menuOpen && (
           <div
-            className="lg:hidden fixed inset-0 bg-slate-950/40 backdrop-blur-xs z-30 transition-opacity duration-300"
+            className="lg:hidden fixed inset-0 h-screen w-screen bg-slate-950/50 backdrop-blur-xs transition-all duration-500 z-[9990]"
             onClick={() => setMenuOpen(false)}
           ></div>
         )}
