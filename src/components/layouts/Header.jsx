@@ -82,20 +82,23 @@ const Header = () => {
           </button>
         </div>
 
+        {/* সচ্ছ (Glassy) Mobile Sidebar Drawer */}
         <div
-          className={`lg:hidden fixed inset-y-0 right-0 w-[290px] h-screen bg-[#0F172B]/85 backdrop-blur-xl border-l border-white/10 p-6 pt-24 shadow-[-10px_0_40px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-in-out flex flex-col justify-between z-[9999]  ${
+          className={`lg:hidden fixed inset-y-0 right-0 w-[290px] h-screen bg-[#0F172B]/85 backdrop-blur-xl border-l border-white/10 p-6 pt-20 shadow-[-10px_0_40px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-in-out flex flex-col justify-between z-[9999] ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
+          {/* ক্লোজ (X) বাটন */}
           <button
             aria-label="Close Menu"
             onClick={() => setMenuOpen(false)}
-            className="absolute top-5 right-5 text-[#FE9A00] text-2xl p-2 rounded-xl bg-white/5 border border-white/10 active:scale-95 transition-all duration-300 cursor-pointer "
+            className="absolute top-5 right-5 text-[#FE9A00] text-xl p-2 rounded-xl bg-white/5 border border-white/10 active:scale-95 transition-all duration-300 cursor-pointer"
           >
             <HiX />
           </button>
 
-          <ul className="flex flex-col gap-y-3">
+          {/* Navigation Links Container */}
+          <ul className="flex flex-col gap-y-2.5 mt-4">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <HashLink
@@ -105,16 +108,18 @@ const Header = () => {
                     if (item.action) item.action();
                     setMenuOpen(false);
                   }}
-                  className="flex items-center gap-4 px-4 py-3 text-slate-300 font-medium text-[16px] rounded-xl border border-transparent hover:text-white hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/20 transition-all duration-300 group"
+                  className="flex items-center gap-x-3.5 px-4 py-3 text-slate-300 font-medium text-[15px] rounded-xl border border-transparent hover:text-white hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/20 transition-all duration-300 group"
                 >
-                  <span className="text-xl text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
+                  {/* মেনু আইকন - যা লেখার সাথে পারফেক্টলি এলাইনড */}
+                  <span className="text-xl text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300 flex items-center justify-center min-w-[24px]">
                     {item.icon}
                   </span>
-                  <span>{item.label}</span>
+                  <span className="tracking-wide">{item.label}</span>
                 </HashLink>
               </li>
             ))}
           </ul>
+
           {/* Premium Mobile Social Action Box */}
           <div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-6">
             <a
@@ -137,6 +142,8 @@ const Header = () => {
             </a>
           </div>
         </div>
+
+        {/* Dynamic Dark Blur Backdrop Overlay */}
         {menuOpen && (
           <div
             className="lg:hidden fixed inset-0 h-screen w-screen bg-slate-950/50 backdrop-blur-xs transition-all duration-500 z-[9990]"
