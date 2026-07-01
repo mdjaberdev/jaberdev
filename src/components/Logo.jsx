@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Logo = () => {
   return (
-    <>
-    <h3 className='text-[36px] font-bold text-white uppercase'>JAB<span className='text-amber-500'>E</span>R</h3>
-    </>
-  )
-}
+    <h3 
+      className={`text-2xl md:text-3xl font-extrabold text-white uppercase tracking-wider`}
+    >
+      Jab<span className="text-[#FE9A00]">e</span>r
+    </h3>
+  );
+};
 
-export default Logo
+export default Logo;

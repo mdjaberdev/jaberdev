@@ -7,8 +7,6 @@ import { Suspense, lazy } from 'react';
 import Loading from './components/Loading';
 const Home = lazy(() => import("/src/components/pages/Home"));
 
-
-
 function App () {
   return (
     <>
@@ -20,9 +18,7 @@ function App () {
           <Routes>
             <Route path="/" element={<RootLayouts />}>
               <Route index element={<Home />} />
-              {/* <Route path="/about" element={<About/>} /> */}
             </Route>
-            {/* <Route path="*" element={<Error/>} /> */}
           </Routes>
         </Suspense>
       </ReactLenis>

@@ -3,81 +3,99 @@ import Container from "../Container";
 import Images from "../Images";
 import jaber from "../../assets/jaberImg.png";
 import Button from "../Button";
-// import Button from "../Button";
-
-
+import { FiAward, FiCheckCircle } from "react-icons/fi"; 
 const Aboutme = () => {
   return (
-    <>
-      <section id="about">
-        <div
-          className="py-15 lg:py-25 bg-[#0F172B]/95 w-full overflow-hidden"
-        >
-          <Container
-            className={
-              "w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1140px] mx-auto px-4"
-            }
-          >
-            <div className="lg:flex lg:justify-between items-center lg:gap-x-12">
-              {/* Left Image Section */}
-              <div className="left lg:w-[40%] flex justify-center lg:sticky lg:top-10">
+    <section id="about" className="relative overflow-hidden bg-[#0F172B]">
+      <div className="py-20 lg:py-32 w-full overflow-hidden border-t border-slate-800/50 relative z-10">
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[400px] h-[400px] bg-[#FE9A00]/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <Container className="w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1140px] mx-auto px-4">
+          <div className="lg:flex lg:justify-between items-center lg:gap-x-16">
+            <div className="left lg:w-[42%] flex justify-center relative mb-12 lg:mb-0 group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#FE9A00]/15 to-transparent blur-3xl rounded-full opacity-70 group-hover:scale-105 transition-transform duration-700"></div>
+
+              <div className="relative p-2.5 bg-slate-900/40 border border-slate-800 rounded-2xl backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2">
+                <div className="absolute inset-0 rounded-2xl border border-[#FE9A00]/20 animate-pulse scale-[1.015] pointer-events-none"></div>
+                <div className="absolute inset-0 rounded-2xl border border-[#FE9A00]/10 animate-ping [animation-duration:4s] pointer-events-none"></div>
+
                 <Images
                   imgSrc={jaber}
-                  className="w-[260px] sm:w-[320px] lg:w-full max-w-md object-contain rounded-lg"
+                  className="w-[280px] sm:w-[340px] lg:w-full max-w-md object-contain rounded-xl relative z-10 transition-transform duration-500 group-hover:scale-[1.01]"
                 />
               </div>
+            </div>
 
-              {/* Right Content Section */}
-              <div className="right lg:w-[55%] mt-10 lg:mt-0 text-center lg:text-left">
-                <h3 className="font-bold text-[32px] lg:text-[42px] text-white leading-tight">
-                  Md Jaber Hossain
-                </h3>
-                <p className="text-[#E2E8F0] font-medium text-[19px] mt-2 italic">
-                  Frontend Developer (React.js & Next.js)
-                </p>
+            <div className="right lg:w-[53%] text-center lg:text-left">
+              <span className="text-[#FE9A00] text-sm font-bold tracking-wider uppercase mb-2 block">
+                About Me
+              </span>
 
-                <p className="text-[#b0c1d8] text-[15px] lg:text-[16px] py-6 leading-relaxed lg:w-150">
-                  Frontend Developer specializing in React and Next.js. Helping brands build a stronger web presence through high-performance, responsive applications. 1+ year of experience in translating design visions into scalable code with a focus on User Experience (UX) and performance optimization.
-                </p>
+              <h3 className="font-extrabold font-Poppins text-[36px] lg:text-[46px] text-white leading-tight tracking-tight">
+                Md Jaber Hossain
+              </h3>
 
-                {/* Education Section */}
-                {/* <div className="education-part mb-8">
-                  <h4 className="text-white font-semibold text-[20px] mb-4 border-b border-[#2d3e5a] pb-2 inline-block">
-                    Education
-                  </h4>
-                  <div className="flex flex-col gap-y-4">
-                    <div className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-[#38BDF8] before:rounded-full">
-                      <h5 className="text-white font-medium text-[17px]">
-                        Creative IT Institute
-                      </h5>
-                      <p className="text-[#FE9A00] text-sm italic">
-                        Front-end Developer (Intern) Creative IT January 2026 -
-                        Present
-                      </p>
-                    </div>
-                    <div className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-[#38BDF8] before:rounded-full">
-                      <h5 className="text-[#E2E8F0] font-semibold text-[17px]">
-                        Govt. Tolaram College
-                      </h5>
-                      <p className="text-[#FE9A00] text-sm italic">
-                        Higher Secondary Certificate (HSC)
-                      </p>
-                    </div>
+              <p className="text-slate-400 font-semibold text-[15px] lg:text-[17px] mt-2.5 flex items-center justify-center lg:justify-start gap-2 tracking-wide">
+                <span className="h-2 w-2 rounded-full bg-[#FE9A00] animate-ping"></span>
+                Frontend Developer (React.js & Next.js)
+              </p>
+
+              <p className="text-[#b0c1d8] text-[15px] lg:text-[16px] py-6 leading-relaxed max-w-[620px] mx-auto lg:mx-0">
+                I specialize in building rich, interactive web applications
+                using{" "}
+                <span className="text-white font-medium hover:text-[#FE9A00] transition-colors duration-200">
+                  React.js
+                </span>{" "}
+                and{" "}
+                <span className="text-white font-medium hover:text-[#FE9A00] transition-colors duration-200">
+                  Next.js
+                </span>
+                . With over a year of experience, I focus on transforming
+                complex design concepts into clean, semantic, and highly
+                optimized code, ensuring an exceptional User Experience (UX).
+              </p>
+
+              <div className="grid grid-cols-2 gap-4 max-w-[450px] mx-auto lg:mx-0 mb-8 text-left">
+                <div className="flex items-center gap-3.5 p-4 bg-slate-900/30 border border-slate-800/80 rounded-xl hover:border-slate-700/50 transition-colors duration-300">
+                  <div className="text-[#FE9A00] text-2xl">
+                    <FiAward />
                   </div>
-                </div> */}
+                  <div>
+                    <span className="text-white font-bold text-lg block leading-tight">
+                      1+ Year
+                    </span>
+                    <span className="text-xs text-slate-400">Experience</span>
+                  </div>
+                </div>
 
-                <div className="flex justify-center lg:justify-start gap-x-4 ">
-                  {/* <Button btnText={"See Work"} /> */}
-                  <a href="/resumeJaber.pdf" download="resumeJaber.pdf">
-                    <Button btnText={"Download Resume"} />
-                  </a>
+                <div className="flex items-center gap-3.5 p-4 bg-slate-900/30 border border-slate-800/80 rounded-xl hover:border-slate-700/50 transition-colors duration-300">
+                  <div className="text-[#FE9A00] text-2xl">
+                    <FiCheckCircle />
+                  </div>
+                  <div>
+                    <span className="text-white font-bold text-lg block leading-tight">
+                      15+
+                    </span>
+                    <span className="text-xs text-slate-400">
+                      Projects Done
+                    </span>
+                  </div>
                 </div>
               </div>
+              <div className="flex justify-center lg:justify-start">
+                <a
+                  href="/resumeJaber.pdf"
+                  download="resumeJaber.pdf"
+                  className="inline-block"
+                >
+                  <Button btnText={"Download Resume"} />
+                </a>
+              </div>
             </div>
-          </Container>
-        </div>
-      </section>
-    </>
+          </div>
+        </Container>
+      </div>
+    </section>
   );
 };
 
