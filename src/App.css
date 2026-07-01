@@ -5,6 +5,10 @@
     --font-Poppins: "Poppins", sans-serif; 
     --shadow-newMade: 0px 0px 3px 0px #1E2939;
 }
+
+body {
+  @apply font-Poppins
+}
 .menuLi {
     @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#FE9A00] after:rounded-full after:transition-all after:duration-300 hover:after:w-full
 }
