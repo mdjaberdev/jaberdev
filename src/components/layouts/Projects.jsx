@@ -2,7 +2,7 @@ import React from "react";
 import Container from "../Container";
 import orebi from "../../assets/orebi.png";
 import portfolio from "../../assets/portfolio.png";
-import cabbage from "../../assets/cabbage.png";
+import cabbage from "../../assets/cabbage.PNG";
 import creative from "../../assets/creative.png";
 import lime from "../../assets/lime.png";
 import nirvoya from "../../assets/nirvoya.png";
