@@ -1,11 +1,19 @@
 import { useState } from "react";
-import Container from "../Container";
-import { BsGithub } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { HiMenu, HiX } from "react-icons/hi";
+import Container from "../Container";
 import Logo from "../Logo";
+import { HiMenu, HiX } from "react-icons/hi";
+import { BsGithub } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa6";
+import {
+  FiHome,
+  FiUser,
+  FiCpu,
+  FiLayers,
+  FiBriefcase,
+  FiMail,
+} from "react-icons/fi";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,12 +27,12 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: "Home", to: "/", action: scrollToTop },
-    { label: "About", to: "#about" },
-    { label: "Services", to: "#services" },
-    { label: "Skills", to: "#skills" },
-    { label: "Projects", to: "#projects" },
-    { label: "Contact", to: "#contact" },
+    { label: "Home", to: "/", icon: <FiHome />, action: scrollToTop },
+    { label: "About", to: "#about", icon: <FiUser /> },
+    { label: "Services", to: "#services", icon: <FiCpu /> },
+    { label: "Skills", to: "#skills", icon: <FiLayers /> },
+    { label: "Projects", to: "#projects", icon: <FiBriefcase /> },
+    { label: "Contact", to: "#contact", icon: <FiMail /> },
   ];
 
   return (
@@ -35,20 +43,25 @@ const Header = () => {
       <Container className="max-w-[1140px] mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link onClick={scrollToTop} to="/">
+          <Link onClick={scrollToTop} to="/" className="relative z-50">
             <Logo />
           </Link>
+
+          {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <ul className="flex gap-x-8 text-[15px] text-slate-300 font-semibold">
+            <ul className="flex gap-x-7 text-[15px] text-slate-300 font-semibold">
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <HashLink
                     smooth
                     to={item.to}
                     onClick={item.action || undefined}
-                    className="relative py-2 hover:text-[#FE9A00] transition-colors duration-300 group inline-block"
+                    className="relative py-2 hover:text-[#FE9A00] transition-colors duration-300 group inline-flex items-center gap-x-2"
                   >
-                    {item.label}
+                    <span className="text-[17px] text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
+                      {item.icon}
+                    </span>
+                    <span>{item.label}</span>
                     <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FE9A00] transition-all duration-300 group-hover:w-full rounded-full"></span>
                   </HashLink>
                 </li>
@@ -75,20 +88,17 @@ const Header = () => {
           </div>
           <button
             aria-label="Toggle Menu"
-            className="lg:hidden text-white text-3xl cursor-pointer relative z-50 p-1 focus:outline-none transition-transform duration-300 active:scale-90"
+            className="lg:hidden text-slate-300 text-3xl cursor-pointer relative z-[10000] p-1.5 rounded-xl bg-slate-900/30 border border-slate-800/60 focus:outline-none transition-transform duration-300 active:scale-90"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <HiX className="text-[#FE9A00]" /> : <HiMenu />}
           </button>
         </div>
-
-        {/* সচ্ছ (Glassy) Mobile Sidebar Drawer */}
         <div
-          className={`lg:hidden fixed inset-y-0 right-0 w-[290px] h-screen bg-[#0F172B]/85 backdrop-blur-xl border-l border-white/10 p-6 pt-20 shadow-[-10px_0_40px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-in-out flex flex-col justify-between z-[9999] ${
+          className={`lg:hidden fixed inset-y-0 right-0 w-[290px] h-screen bg-[#0F172B]/85 backdrop-blur-xl border-l border-white/10 p-6 pt-20 pb-8 shadow-[-10px_0_40px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-in-out flex flex-col justify-between z-[9999] ${
             menuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {/* ক্লোজ (X) বাটন */}
           <button
             aria-label="Close Menu"
             onClick={() => setMenuOpen(false)}
@@ -97,8 +107,7 @@ const Header = () => {
             <HiX />
           </button>
 
-          {/* Navigation Links Container */}
-          <ul className="flex flex-col gap-y-2.5 mt-4">
+          <ul className="flex flex-col gap-y-2.5 mt-6 flex-1 overflow-y-auto max-h-[calc(100vh-200px)] custom-scrollbar">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <HashLink
@@ -110,7 +119,6 @@ const Header = () => {
                   }}
                   className="flex items-center gap-x-3.5 px-4 py-3 text-slate-300 font-medium text-[15px] rounded-xl border border-transparent hover:text-white hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/20 transition-all duration-300 group"
                 >
-                  {/* মেনু আইকন - যা লেখার সাথে পারফেক্টলি এলাইনড */}
                   <span className="text-xl text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300 flex items-center justify-center min-w-[24px]">
                     {item.icon}
                   </span>
@@ -120,8 +128,7 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Premium Mobile Social Action Box */}
-          <div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-6">
+          <div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-4 mt-auto mb-2">
             <a
               href="https://github.com/mdjaberdev"
               target="_blank"
@@ -142,14 +149,6 @@ const Header = () => {
             </a>
           </div>
         </div>
-
-        {/* Dynamic Dark Blur Backdrop Overlay */}
-        {menuOpen && (
-          <div
-            className="lg:hidden fixed inset-0 h-screen w-screen bg-slate-950/50 backdrop-blur-xs transition-all duration-500 z-[9990]"
-            onClick={() => setMenuOpen(false)}
-          ></div>
-        )}
       </Container>
     </header>
   );
