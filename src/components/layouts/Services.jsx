@@ -99,7 +99,6 @@ const Services = () => {
 
                   <div className="relative z-10 pl-6 lg:pl-10 pr-4">
                     <div className="flex items-center justify-between">
-                      {/* Icon & Title */}
                       <div className="flex items-center gap-6 lg:gap-8">
                         <div
                           className={`text-3xl transition-transform duration-500 ${isActive ? "text-[#FE9A00] scale-110" : "text-slate-500"}`}
@@ -112,8 +111,6 @@ const Services = () => {
                           {item.title}
                         </h4>
                       </div>
-
-                      {/* Animated Arrow */}
                       <div className="hidden md:block">
                         <FaArrowRight
                           className={`text-xl transition-all duration-500 ${isActive ? "text-[#FE9A00] opacity-100 translate-x-0" : "text-slate-600 opacity-0 -translate-x-4"}`}
