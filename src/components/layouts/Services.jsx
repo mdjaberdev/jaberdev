@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Container";
 import { FaPaintBrush } from "react-icons/fa";
-import { FaBolt, FaBug, FaCode, FaGitAlt } from "react-icons/fa6";
+import { FaBolt, FaBug, FaCode, FaGitAlt, FaArrowRight } from "react-icons/fa6";
 import { MdDevices } from "react-icons/md";
 
 const Services = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
   const services = [
     {
       icon: <FaCode />,
@@ -28,66 +30,117 @@ const Services = () => {
     },
     {
       icon: <FaBug />,
-      title: "Bug Fixing",
+      title: "Bug Fixing & Auditing",
       desc: "I quickly identify and fix front-end issues to improve stability and usability of websites.",
     },
     {
       icon: <FaGitAlt />,
-      title: "Deployment & Version Control",
+      title: "Deployment & Version Contro",
       desc: "I manage code using Git and deploy websites on platforms like Netlify or Vercel.",
     },
   ];
 
   return (
-    <div
+    <section
       id="services"
-      className="py-20  lg:py-32 bg-[#0F172B] w-full border-t border-slate-800/50 relative overflow-hidden"
+      className="relative py-24 lg:py-32 bg-[#0F172B] w-full overflow-hidden font-sans"
     >
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[#FE9A00]/5 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[600px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#FE9A00]/10 via-[#030712]/5 to-transparent blur-[100px] pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-900/10 via-[#030712]/5 to-transparent blur-[120px] pointer-events-none"></div>
 
-      <Container className="mx-auto w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1140px] px-4 relative z-10">
-        <div className="text-center max-w-[600px] mx-auto mb-16">
-          <span className="text-[#FE9A00] text-sm font-bold tracking-wider uppercase mb-2 block">
-            Services
-          </span>
-          <h3 className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-            What do I offer...?
-          </h3>
-          <div className="h-1 w-12 bg-[#FE9A00] mx-auto mt-4 rounded-full"></div>
-          <p className="text-[#90A1B9] text-[15px] mt-4 leading-relaxed">
-            I'm a Frontend Developer passionate about creating responsive,
-            user-friendly web interfaces by turning Figma designs into clean,
-            semantic, and high-performance code.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((item, index) => (
-            <div
-              key={index}
-              className="group rounded-2xl p-8 bg-slate-900/30 border border-slate-800/60 transition-all duration-500 hover:border-[#FE9A00]/30 hover:-translate-y-2 relative overflow-hidden backdrop-blur-sm shadow-xl flex flex-col justify-between"
-            >
-              <div className="absolute inset-0 bg-gradient-to-b from-white/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-
-              <div>
-                <div className="w-14 h-14 rounded-xl bg-slate-800/50 border border-slate-700/50 flex items-center justify-center text-[#FE9A00] text-2xl transition-all duration-500 group-hover:bg-[#FE9A00] group-hover:text-white group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(254,154,0,0.4)]">
-                  {item.icon}
-                </div>
-                <h4 className="font-bold text-white text-lg mt-6 transition-colors duration-300 group-hover:text-[#FE9A00]">
-                  {item.title}
-                </h4>
-
-                <p className="text-[14px] lg:text-[15px] text-[#90A1B9] mt-3 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-
-              <div className="w-6 h-[2px] bg-slate-700 mt-6 transition-all duration-500 group-hover:w-full group-hover:bg-[#FE9A00] rounded-full"></div>
+      <Container className="mx-auto w-full max-w-[1300px] px-6 lg:px-10 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-20 items-start">
+          <div className="lg:w-2/5 lg:sticky lg:top-40 flex flex-col items-start relative z-20">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.03] border border-white/[0.05] backdrop-blur-md mb-8">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FE9A00] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#FE9A00]"></span>
+              </span>
+              <span className="text-slate-300 text-xs font-semibold tracking-[0.2em] uppercase">
+                Expertise
+              </span>
             </div>
-          ))}
+
+            <h3 className="text-5xl lg:text-7xl font-extrabold tracking-tighter leading-[1.05] mb-8 bg-clip-text text-transparent bg-gradient-to-br from-white via-slate-200 to-slate-600">
+              Transforming <br /> ideas into <br />{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FE9A00] to-orange-300">
+                reality.
+              </span>
+            </h3>
+
+            <p className="text-slate-400 text-lg leading-relaxed max-w-md font-light">
+              I specialize in crafting immersive, high-performance web
+              experiences. From pixel-perfect UI to seamless interactions, I
+              bring digital visions to life.
+            </p>
+          </div>
+          <div className="lg:w-3/5 w-full flex flex-col group/list relative z-20">
+            {services.map((item, index) => {
+              const isActive = activeIndex === index;
+
+              return (
+                <div
+                  key={index}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  className={`group relative cursor-pointer border-b border-white/[0.05] py-8 lg:py-10 transition-all duration-700 ease-out overflow-hidden
+                    ${isActive ? "opacity-100" : "opacity-40 hover:opacity-70 group-hover/list:opacity-30"}
+                  `}
+                >
+                  <div
+                    className={`absolute left-0 top-0 w-[2px] bg-gradient-to-b from-[#FE9A00] to-orange-400 transition-all duration-500 ease-out shadow-[0_0_15px_#FE9A00]
+                    ${isActive ? "h-full opacity-100" : "h-0 opacity-0"}
+                  `}
+                  ></div>
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r from-white/[0.03] to-transparent transition-opacity duration-500
+                    ${isActive ? "opacity-100" : "opacity-0"}
+                  `}
+                  ></div>
+
+                  <div className="relative z-10 pl-6 lg:pl-10 pr-4">
+                    <div className="flex items-center justify-between">
+                      {/* Icon & Title */}
+                      <div className="flex items-center gap-6 lg:gap-8">
+                        <div
+                          className={`text-3xl transition-transform duration-500 ${isActive ? "text-[#FE9A00] scale-110" : "text-slate-500"}`}
+                        >
+                          {item.icon}
+                        </div>
+                        <h4
+                          className={`text-2xl lg:text-4xl font-bold tracking-tight transition-colors duration-500 ${isActive ? "text-white" : "text-slate-300"}`}
+                        >
+                          {item.title}
+                        </h4>
+                      </div>
+
+                      {/* Animated Arrow */}
+                      <div className="hidden md:block">
+                        <FaArrowRight
+                          className={`text-xl transition-all duration-500 ${isActive ? "text-[#FE9A00] opacity-100 translate-x-0" : "text-slate-600 opacity-0 -translate-x-4"}`}
+                        />
+                      </div>
+                    </div>
+                    <div
+                      className={`grid transition-all duration-500 ease-in-out ${
+                        isActive
+                          ? "grid-rows-[1fr] opacity-100 mt-6"
+                          : "grid-rows-[0fr] opacity-0 mt-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <p className="text-slate-400 text-lg leading-relaxed max-w-2xl pl-[60px] lg:pl-[68px]">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 
