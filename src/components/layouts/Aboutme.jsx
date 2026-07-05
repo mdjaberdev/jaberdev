@@ -13,15 +13,15 @@ const Aboutme = () => {
         <Container className="w-full max-w-[360px] md:max-w-[720px] lg:max-w-[1140px] mx-auto px-4">
           <div className="lg:flex lg:justify-between items-center lg:gap-x-16">
             <div className="left lg:w-[42%] flex justify-center relative mb-12 lg:mb-0 group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#FE9A00]/15 to-transparent blur-3xl rounded-full opacity-70 group-hover:scale-105 transition-transform duration-700"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#FE9A00]/15 to-transparent blur-3xl rounded-full opacity-70 "></div>
 
-              <div className="relative p-2.5 bg-slate-900/40 border border-slate-800 rounded-2xl backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2">
-                <div className="absolute inset-0 rounded-2xl border border-[#FE9A00]/20 animate-pulse scale-[1.015] pointer-events-none"></div>
-                <div className="absolute inset-0 rounded-2xl border border-[#FE9A00]/10 animate-ping [animation-duration:4s] pointer-events-none"></div>
+              <div className="relative p-2.5 bg-slate-900/40 border border-slate-800 rounded-full backdrop-blur-sm shadow-[0_20px_50px_rgba(0,0,0,0.3)] ">
+                <div className="absolute inset-0 rounded-full border border-[#FE9A00]/20 animate-pulse scale-[1.015] pointer-events-none"></div>
+                <div className="absolute inset-0 rounded-full border-3 border-[#FE9A00]/30 animate-ping [animation-duration:1300ms] pointer-events-none"></div>
 
                 <Images
                   imgSrc={jaber}
-                  className="w-[280px] sm:w-[340px] lg:w-full max-w-md object-contain rounded-xl relative z-10 transition-transform duration-500 group-hover:scale-[1.01]"
+                  className="w-[280px] sm:w-[340px] lg:w-full max-w-md object-contain rounded-xl relative z-10"
                 />
               </div>
             </div>
@@ -36,7 +36,7 @@ const Aboutme = () => {
               </h3>
 
               <p className="text-slate-400 font-semibold text-[15px] lg:text-[17px] mt-2.5 flex items-center justify-center lg:justify-start gap-2 tracking-wide">
-                <span className="h-2 w-2 rounded-full bg-[#FE9A00] animate-ping"></span>
+                {/* <span className="h-2 w-2 rounded-full bg-[#FE9A00] animate-ping"></span> */}
                 Frontend Developer (React.js & Next.js)
               </p>
 
