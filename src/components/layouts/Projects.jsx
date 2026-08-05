@@ -20,6 +20,30 @@ const Projects = () => {
       git: "https://github.com/mdjaberdev/creativeWeb",
       tags: ["HTML", "Tailwind CSS", "JavaScript", "Team Work"],
     },
+
+    {
+      title: "Cabbage E-Commerce",
+      desc: "A fresh grocery and organic food e-commerce layout built with responsive UI modules.",
+      img: cabbage,
+      live: "https://e-cabbage.vercel.app",
+      git: "https://github.com/mdjaberdev/e-Cabbage",
+      tags: [
+        "context-api",
+        "helmet-async",
+        "lazy-loading",
+        "react-vite",
+        "tailwindcss",
+      ],
+    },
+
+    {
+      title: "Lime Landing Page",
+      desc: "A high-conversion corporate landing page design targeting modern aesthetics.",
+      img: lime,
+      live: "https://lime-ten.vercel.app/",
+      git: "https://github.com/mdjaberdev/lime",
+      tags: ["React.js", "Tailwind CSS", "Vite"],
+    },
     {
       title: "Orebi E-Commerce",
       desc: "A responsive e-commerce frontend built with advanced product filtering and dynamic cart interactions.",
@@ -35,22 +59,6 @@ const Projects = () => {
       live: "https://mdjaberdev.github.io/Hancok/",
       git: "https://github.com/mdjaberdev/Hancok",
       tags: ["HTML", "CSS"],
-    },
-    {
-      title: "E-Cabbage Store",
-      desc: "A fresh grocery and organic food e-commerce layout built with responsive UI modules.",
-      img: cabbage,
-      live: "https://e-cabbage.vercel.app",
-      git: "https://github.com/mdjaberdev/e-Cabbage",
-      tags: ["React.js", "Tailwind CSS", "Vite"],
-    },
-    {
-      title: "Lime Landing Page",
-      desc: "A high-conversion corporate landing page design targeting modern aesthetics.",
-      img: lime,
-      live: "https://lime-ten.vercel.app/",
-      git: "https://github.com/mdjaberdev/lime",
-      tags: ["React.js", "Tailwind CSS", "Vite"],
     },
     {
       title: "Project Nirvoya",
