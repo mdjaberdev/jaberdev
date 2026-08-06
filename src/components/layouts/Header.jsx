@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Container from "../Container";
 import Logo from "../Logo";
+import ThemeToggle from "../ThemeToggle";
 import { HiMenu, HiX } from "react-icons/hi";
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa6";
@@ -19,10 +20,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     setMenuOpen(false);
   };
 
@@ -36,20 +34,16 @@ const Header = () => {
   ];
 
   return (
-    <header
-      className="bg-[#0F172B]/80 backdrop-blur-md py-4 w-full fixed top-0 left-0 z-[999] border-b border-slate-800/40 transition-all duration-300"
-      id="header"
-    >
+    <header className="bg-white/80 dark:bg-[#0F172B]/80 backdrop-blur-md py-4 w-full fixed top-0 left-0 z-[999] border-b border-slate-200 dark:border-slate-800/40 transition-colors duration-300">
       <Container className="max-w-[1140px] mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link onClick={scrollToTop} to="/" className="relative z-50">
             <Logo />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <nav className="hidden lg:block">
-            <ul className="flex gap-x-7 text-[15px] text-slate-300 font-semibold">
+            <ul className="flex gap-x-7 text-[15px] text-slate-700 dark:text-slate-300 font-semibold">
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <HashLink
@@ -58,22 +52,23 @@ const Header = () => {
                     onClick={item.action || undefined}
                     className="relative py-2 hover:text-[#FE9A00] transition-colors duration-300 group inline-flex items-center gap-x-2"
                   >
-                    <span className="text-[17px] text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
+                    <span className="text-[17px] text-slate-500 dark:text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
                       {item.icon}
                     </span>
                     <span>{item.label}</span>
-                    <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FE9A00] transition-all duration-300 group-hover:w-full rounded-full"></span>
                   </HashLink>
                 </li>
               ))}
             </ul>
           </nav>
-          <div className="hidden lg:flex items-center gap-x-4">
+
+          <div className="hidden lg:flex items-center gap-x-3">
             <a
               href="https://github.com/mdjaberdev"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/30 transition-all duration-300"
+              aria-label="GitHub Profile"
+              className="w-9 h-9 rounded-xl bg-slate-200 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-all"
             >
               <BsGithub />
             </a>
@@ -81,74 +76,69 @@ const Header = () => {
               href="https://www.linkedin.com/in/mdjaberdev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-9 h-9 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:border-[#0077B5]/30 transition-all duration-300"
+              aria-label="LinkedIn Profile"
+              className="w-9 h-9 rounded-xl bg-slate-200 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-[#0077B5] transition-all"
             >
               <FaLinkedin />
             </a>
+            <ThemeToggle />
           </div>
-          <button
-            aria-label="Toggle Menu"
-            className="lg:hidden text-slate-300 text-3xl cursor-pointer relative z-[10000] p-1.5 rounded-xl bg-slate-900/30 border border-slate-800/60 focus:outline-none transition-transform duration-300 active:scale-90"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <HiX className="text-[#FE9A00]" /> : <HiMenu />}
-          </button>
-        </div>
-        <div
-          className={`lg:hidden fixed inset-y-0 right-0 w-[290px] h-screen bg-[#0F172B]/85 backdrop-blur-xl border-l border-white/10 p-6 pt-20 pb-8 shadow-[-10px_0_40px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-in-out flex flex-col justify-between z-[9999] ${
-            menuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <button
-            aria-label="Close Menu"
-            onClick={() => setMenuOpen(false)}
-            className="absolute top-5 right-5 text-[#FE9A00] text-xl p-2 rounded-xl bg-white/5 border border-white/10 active:scale-95 transition-all duration-300 cursor-pointer"
-          >
-            <HiX />
-          </button>
 
-          <ul className="flex flex-col gap-y-2.5 mt-6 flex-1 overflow-y-auto max-h-[calc(100vh-200px)] custom-scrollbar">
-            {menuItems.map((item, index) => (
-              <li key={index}>
-                <HashLink
-                  smooth
-                  to={item.to}
-                  onClick={() => {
-                    if (item.action) item.action();
-                    setMenuOpen(false);
-                  }}
-                  className="flex items-center gap-x-3.5 px-4 py-3 text-slate-300 font-medium text-[15px] rounded-xl border border-transparent hover:text-white hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/20 transition-all duration-300 group"
-                >
-                  <span className="text-xl text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300 flex items-center justify-center min-w-[24px]">
-                    {item.icon}
-                  </span>
-                  <span className="tracking-wide">{item.label}</span>
-                </HashLink>
-              </li>
-            ))}
-          </ul>
-
-          <div className="grid grid-cols-2 gap-3 border-t border-white/10 pt-4 mt-auto mb-2">
-            <a
-              href="https://github.com/mdjaberdev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-[#FE9A00]/20 hover:border-[#FE9A00]/30 transition-all duration-300 text-sm font-medium"
+          {/* Mobile  Icon */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle />
+            <button
+              aria-label="Toggle Menu"
+              className="text-slate-700 dark:text-slate-300 text-3xl p-1.5 rounded-xl bg-slate-200 dark:bg-slate-900/30 border border-slate-300 dark:border-slate-800/60"
+              onClick={() => setMenuOpen(!menuOpen)}
             >
-              <BsGithub className="text-lg" />
-              <span>GitHub</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mdjaberdev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-[#0077B5] hover:bg-[#0077B5]/20 hover:border-[#0077B5]/30 transition-all duration-300 text-sm font-medium"
-            >
-              <FaLinkedin className="text-lg" />
-              <span>LinkedIn</span>
-            </a>
+              {menuOpen ? <HiX className="text-[#FE9A00]" /> : <HiMenu />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile */}
+        {menuOpen && (
+          <div className="absolute top-full left-0 w-full bg-white dark:bg-[#0F172B] border-b border-slate-200 dark:border-slate-800 shadow-2xl py-6 px-6 lg:hidden flex flex-col gap-4 transition-colors duration-300">
+            <ul className="flex flex-col gap-y-3">
+              {menuItems.map((item, index) => (
+                <li key={index}>
+                  <HashLink
+                    smooth
+                    to={item.to}
+                    onClick={() => {
+                      if (item.action) item.action();
+                      setMenuOpen(false);
+                    }}
+                    className="flex items-center gap-x-3 py-2.5 px-4 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-[#FE9A00] transition-all font-medium"
+                  >
+                    <span className="text-xl text-[#FE9A00]">{item.icon}</span>
+                    <span>{item.label}</span>
+                  </HashLink>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex items-center gap-x-4 pt-4 border-t border-slate-200 dark:border-slate-800">
+              <a
+                href="https://github.com/mdjaberdev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-all text-sm font-semibold"
+              >
+                <BsGithub className="text-lg" /> GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mdjaberdev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2 text-slate-700 dark:text-slate-300 hover:text-[#0077B5] transition-all text-sm font-semibold"
+              >
+                <FaLinkedin className="text-lg text-[#0077B5]" /> LinkedIn
+              </a>
+            </div>
+          </div>
+        )}
       </Container>
     </header>
   );

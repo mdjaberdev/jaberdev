@@ -2,9 +2,7 @@ import React from "react";
 
 const Logo = () => {
   return (
-    <h3 
-      className={`text-2xl md:text-3xl font-extrabold text-white uppercase tracking-wider`}
-    >
+    <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white uppercase tracking-wider transition-colors duration-300">
       Jab<span className="text-[#FE9A00]">e</span>r
     </h3>
   );

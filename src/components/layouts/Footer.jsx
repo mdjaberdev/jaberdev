@@ -9,26 +9,28 @@ import Logo from "../Logo";
 const Footer = () => {
   const whatsappNumber = "8801811956107";
   const message = "Hello Jaber! I visited your website and want to connect.";
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    message,
+  )}`;
 
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <footer className="py-8 bg-[#0F172B] w-full relative border-t border-slate-800/60">
+    <footer className="py-8 bg-slate-50 dark:bg-[#0F172B] w-full relative border-t border-slate-200 dark:border-slate-800/60 transition-colors duration-300">
       <Container className="w-full px-4 xl:w-[1140px] mx-auto">
         <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-6 sm:gap-0 text-center sm:text-left">
           {/* Logo */}
           <Link onClick={scrollToTop} to="/">
             <Logo />
           </Link>
-          <p className="text-slate-400 text-sm lg:text-[15px] font-medium tracking-wide order-3 sm:order-2">
+          <p className="text-slate-600 dark:text-slate-400 text-sm lg:text-[15px] font-medium tracking-wide order-3 sm:order-2">
             &copy; 2026{" "}
-            <span className="text-white hover:text-[#FE9A00] transition-colors duration-200">
+            <span className="text-slate-900 dark:text-white hover:text-[#FE9A00] transition-colors duration-200">
               Jaber
             </span>
             . All Rights Reserved.
@@ -39,7 +41,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub Profile"
-              className="w-10 h-10 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/30 transition-all duration-300 text-lg shadow-inner"
+              className="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-300/60 dark:hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/30 transition-all duration-300 text-lg shadow-inner"
             >
               <BsGithub />
             </a>
@@ -48,7 +50,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn Profile"
-              className="w-10 h-10 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:border-[#0077B5]/30 transition-all duration-300 text-lg shadow-inner"
+              className="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-400 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:border-[#0077B5]/30 transition-all duration-300 text-lg shadow-inner"
             >
               <FaLinkedin />
             </a>
@@ -57,7 +59,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               title="Send Email"
-              className="w-10 h-10 rounded-xl bg-slate-900/50 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-[#EA4335] hover:bg-[#EA4335]/10 hover:border-[#EA4335]/30 transition-all duration-300 text-lg shadow-inner"
+              className="w-10 h-10 rounded-xl bg-slate-200 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-400 hover:text-[#EA4335] hover:bg-[#EA4335]/10 hover:border-[#EA4335]/30 transition-all duration-300 text-lg shadow-inner"
             >
               <SiGmail />
             </a>
@@ -76,7 +78,7 @@ const Footer = () => {
           <span className="absolute inset-0 scale-105 rounded-full bg-[#25D366]/20 animate-pulse -z-10"></span>
 
           <FaWhatsapp className="text-white text-3xl transition-transform duration-500 group-hover:rotate-[360px]" />
-          <span className="absolute right-16 bg-slate-950/90 text-white text-xs font-semibold px-3 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap transition-all duration-300 pointer-events-none translate-x-2 group-hover:translate-x-0 border border-slate-800/80 shadow-2xl backdrop-blur-md tracking-wide">
+          <span className="absolute right-16 bg-white dark:bg-slate-950/90 text-slate-900 dark:text-white text-xs font-semibold px-3 py-2 rounded-xl opacity-0 group-hover:opacity-100 whitespace-nowrap transition-all duration-300 pointer-events-none translate-x-2 group-hover:translate-x-0 border border-slate-200 dark:border-slate-800/80 shadow-2xl backdrop-blur-md tracking-wide">
             Let's Chat! 💬
           </span>
         </a>

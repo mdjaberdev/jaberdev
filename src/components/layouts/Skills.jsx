@@ -66,9 +66,11 @@ const Skills = () => {
       name: "Next.js",
       category: "Frameworks",
       icon: <SiNextdotjs />,
-      color: "#FFFFFF",
-      bg: "group-hover:bg-white/10",
-      border: "group-hover:border-white/50",
+      color: "#000000",
+      darkColor: "#FFFFFF",
+      bg: "group-hover:bg-slate-900/10 dark:group-hover:bg-white/10",
+      border:
+        "group-hover:border-slate-900/50 dark:group-hover:border-white/50",
     },
     {
       name: "Tailwind CSS",
@@ -98,9 +100,11 @@ const Skills = () => {
       name: "GitHub",
       category: "Tools",
       icon: <FaGithub />,
-      color: "#FFFFFF",
-      bg: "group-hover:bg-white/10",
-      border: "group-hover:border-white/50",
+      color: "#000000",
+      darkColor: "#FFFFFF",
+      bg: "group-hover:bg-slate-900/10 dark:group-hover:bg-white/10",
+      border:
+        "group-hover:border-slate-900/50 dark:group-hover:border-white/50",
     },
     {
       name: "Figma",
@@ -120,24 +124,24 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative py-24 lg:py-32 bg-[#0F172B] w-full min-h-screen flex items-center overflow-hidden font-sans"
+      className="relative py-24 lg:py-32 bg-white dark:bg-[#0F172B] w-full min-h-screen flex items-center overflow-hidden font-sans transition-colors duration-300"
     >
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f12_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f12_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#4f4f4f12_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f12_1px,transparent_1px)] bg-[size:40px_40px]"></div>
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FE9A00]/5 blur-[150px] rounded-full pointer-events-none transition-all duration-1000 mix-blend-screen"></div>
 
       <Container className="mx-auto w-full max-w-[1200px] px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-300 to-slate-600 tracking-tighter mb-4">
+            <h2 className="text-4xl md:text-6xl font-black py-4 text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-500 dark:from-white dark:via-slate-300 dark:to-slate-600 tracking-tighter mb-4">
               My Tech Stack.
             </h2>
-            <p className="text-slate-400 text-lg font-light leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 text-lg font-light leading-relaxed">
               The frameworks, languages, and tools I use to craft seamless
               digital experiences.
             </p>
           </div>
-          <div className="flex flex-wrap gap-2 p-1.5 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md">
+          <div className="flex flex-wrap gap-2 p-1.5 rounded-2xl bg-slate-100 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 backdrop-blur-md">
             {tabs.map((tab) => (
               <button
                 key={tab}
@@ -145,7 +149,7 @@ const Skills = () => {
                 className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
                   activeTab === tab
                     ? "bg-[#FE9A00] text-white shadow-[0_0_20px_rgba(254,154,0,0.3)]"
-                    : "text-slate-400 hover:text-white hover:bg-white/5"
+                    : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/5"
                 }`}
               >
                 {tab}
@@ -157,8 +161,8 @@ const Skills = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 lg:gap-6 min-h-[400px] items-start">
           {filteredSkills.map((skill, index) => (
             <div
-              key={skill.name} 
-              className={`group relative aspect-square rounded-2xl bg-[#0A0A0A] border border-white/5 p-6 flex flex-col items-center justify-center gap-4 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl z-10 overflow-hidden ${skill.border}`}
+              key={skill.name}
+              className={`group relative aspect-square rounded-2xl bg-slate-50 dark:bg-[#0A0A0A] border border-slate-200 dark:border-white/5 p-6 flex flex-col items-center justify-center gap-4 transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl z-10 overflow-hidden ${skill.border}`}
               style={{
                 animation: `fadeIn 0.5s ease-out ${index * 0.05}s both`,
               }}
@@ -168,13 +172,20 @@ const Skills = () => {
               ></div>
 
               <div
-                className="text-5xl lg:text-6xl transition-all duration-500 transform group-hover:scale-110 drop-shadow-lg"
-                style={{ color: skill.color }} 
+                className="text-5xl lg:text-6xl transition-all duration-500 transform group-hover:scale-110 drop-shadow-lg dark:hidden"
+                style={{ color: skill.color }}
               >
                 {skill.icon}
               </div>
 
-              <span className="text-slate-300 font-medium text-sm tracking-wide transition-colors duration-300 group-hover:text-white mt-2">
+              <div
+                className="text-5xl lg:text-6xl transition-all duration-500 transform group-hover:scale-110 drop-shadow-lg hidden dark:block"
+                style={{ color: skill.darkColor || skill.color }}
+              >
+                {skill.icon}
+              </div>
+
+              <span className="text-slate-700 dark:text-slate-300 font-medium text-sm tracking-wide transition-colors duration-300 group-hover:text-slate-900 dark:group-hover:text-white mt-2">
                 {skill.name}
               </span>
 
