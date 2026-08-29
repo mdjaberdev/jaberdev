@@ -1,9 +1,11 @@
 import React from "react";
-import Container from "../Container";
-import Images from "../Images";
+
 import jaber from "../../assets/githubImage.jpg";
-import Button from "../Button";
+
 import { FiAward, FiCheckCircle } from "react-icons/fi";
+import Container from "../common/Container";
+import Images from "../common/Images";
+import Button from "../common/Button";
 
 const Aboutme = () => {
   return (

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-import Container from "../Container";
-import Logo from "../Logo";
-import ThemeToggle from "../ThemeToggle";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
+import Container from "../common/Container";
+import Logo from "../common/Logo";
+import ThemeToggle from "../common/ThemeToggle";
 import { HiMenu, HiX } from "react-icons/hi";
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa6";
@@ -25,38 +25,53 @@ const Header = () => {
   };
 
   const menuItems = [
-    { label: "Home", to: "/", icon: <FiHome />, action: scrollToTop },
-    { label: "About", to: "#about", icon: <FiUser /> },
-    { label: "Services", to: "#services", icon: <FiCpu /> },
-    { label: "Skills", to: "#skills", icon: <FiLayers /> },
-    { label: "Projects", to: "#projects", icon: <FiBriefcase /> },
-    { label: "Contact", to: "#contact", icon: <FiMail /> },
+    { label: "Home", to: "home", icon: <FiHome />, isTop: true },
+    { label: "About", to: "about", icon: <FiUser /> },
+    { label: "Services", to: "services", icon: <FiCpu /> },
+    { label: "Skills", to: "skills", icon: <FiLayers /> },
+    { label: "Projects", to: "projects", icon: <FiBriefcase /> },
+    { label: "Contact", to: "contact", icon: <FiMail /> },
   ];
 
   return (
     <header className="bg-white/80 dark:bg-[#0F172B]/80 backdrop-blur-md py-4 w-full fixed top-0 left-0 z-[999] border-b border-slate-200 dark:border-slate-800/40 transition-colors duration-300">
       <Container className="max-w-[1140px] mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link onClick={scrollToTop} to="/" className="relative z-50">
+          <RouterLink onClick={scrollToTop} to="/" className="relative z-50">
             <Logo />
-          </Link>
+          </RouterLink>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:block">
-            <ul className="flex gap-x-7 text-[15px] text-slate-700 dark:text-slate-300 font-semibold">
+            <ul className="flex gap-x-7 text-[15px] font-semibold">
               {menuItems.map((item, index) => (
                 <li key={index}>
-                  <HashLink
-                    smooth
-                    to={item.to}
-                    onClick={item.action || undefined}
-                    className="relative py-2 hover:text-[#FE9A00] transition-colors duration-300 group inline-flex items-center gap-x-2"
-                  >
-                    <span className="text-[17px] text-slate-500 dark:text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
-                      {item.icon}
-                    </span>
-                    <span>{item.label}</span>
-                  </HashLink>
+                  {item.isTop ? (
+                    <button
+                      onClick={scrollToTop}
+                      className="relative py-2 text-slate-700 dark:text-slate-300 hover:text-[#FE9A00] transition-colors duration-300 group inline-flex items-center gap-x-2 cursor-pointer"
+                    >
+                      <span className="text-[17px] text-slate-500 dark:text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
+                        {item.icon}
+                      </span>
+                      <span>{item.label}</span>
+                    </button>
+                  ) : (
+                    <ScrollLink
+                      activeClass="!text-[#FE9A00] [&>span]:!text-[#FE9A00]"
+                      to={item.to}
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                      duration={500}
+                      className="relative py-2 text-slate-700 dark:text-slate-300 hover:text-[#FE9A00] transition-colors duration-300 group inline-flex items-center gap-x-2 cursor-pointer"
+                    >
+                      <span className="text-[17px] text-slate-500 dark:text-slate-400 group-hover:text-[#FE9A00] transition-colors duration-300">
+                        {item.icon}
+                      </span>
+                      <span>{item.label}</span>
+                    </ScrollLink>
+                  )}
                 </li>
               ))}
             </ul>
@@ -84,7 +99,7 @@ const Header = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile  Icon */}
+          {/* Mobile Icon */}
           <div className="flex items-center gap-2 lg:hidden">
             <ThemeToggle />
             <button
@@ -97,24 +112,39 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile Menu */}
         {menuOpen && (
           <div className="absolute top-full left-0 w-full bg-white dark:bg-[#0F172B] border-b border-slate-200 dark:border-slate-800 shadow-2xl py-6 px-6 lg:hidden flex flex-col gap-4 transition-colors duration-300">
             <ul className="flex flex-col gap-y-3">
               {menuItems.map((item, index) => (
                 <li key={index}>
-                  <HashLink
-                    smooth
-                    to={item.to}
-                    onClick={() => {
-                      if (item.action) item.action();
-                      setMenuOpen(false);
-                    }}
-                    className="flex items-center gap-x-3 py-2.5 px-4 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-[#FE9A00] transition-all font-medium"
-                  >
-                    <span className="text-xl text-[#FE9A00]">{item.icon}</span>
-                    <span>{item.label}</span>
-                  </HashLink>
+                  {item.isTop ? (
+                    <button
+                      onClick={scrollToTop}
+                      className="w-full flex items-center gap-x-3 py-2.5 px-4 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-[#FE9A00] transition-all font-medium text-left cursor-pointer"
+                    >
+                      <span className="text-xl text-[#FE9A00]">
+                        {item.icon}
+                      </span>
+                      <span>{item.label}</span>
+                    </button>
+                  ) : (
+                    <ScrollLink
+                      activeClass="!text-[#FE9A00] bg-slate-100 dark:bg-slate-900"
+                      to={item.to}
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                      duration={500}
+                      onClick={() => setMenuOpen(false)}
+                      className="flex items-center gap-x-3 py-2.5 px-4 rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-900 hover:text-[#FE9A00] transition-all font-medium cursor-pointer"
+                    >
+                      <span className="text-xl text-[#FE9A00]">
+                        {item.icon}
+                      </span>
+                      <span>{item.label}</span>
+                    </ScrollLink>
+                  )}
                 </li>
               ))}
             </ul>

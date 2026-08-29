@@ -1,5 +1,5 @@
-import Container from "../Container";
-import Images from "../Images";
+import Container from "../common/Container";
+import Images from "../common/Images";
 import review from "../../assets/review.png";
 import { FaStar } from "react-icons/fa";
 import r1 from "../../assets/r1.png";

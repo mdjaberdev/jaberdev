@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Container from "../Container";
+import Container from "../common/Container";
 import { FaPaintBrush } from "react-icons/fa";
 import { FaBolt, FaBug, FaCode, FaGitAlt, FaArrowRight } from "react-icons/fa6";
 import { MdDevices } from "react-icons/md";

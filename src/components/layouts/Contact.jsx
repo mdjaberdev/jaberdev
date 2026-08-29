@@ -1,12 +1,11 @@
 import React from "react";
-import Container from "../Container";
-import Flex from "../Flex";
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
-import Button from "../Button";
+import Button from "../common/Button";
 import { Toaster } from "react-hot-toast";
-import { useContactForm } from "../../components/useContactForm";
+import Container from "../common/Container";
+import { useContactForm } from "../common/useContactForm";
 
 const Contact = () => {
   const { formRef, loading, handleSubmit } = useContactForm(

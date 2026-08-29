@@ -1,6 +1,6 @@
 import React from "react";
-import Container from "../Container";
-import Button from "../Button";
+import Container from "../common/Container";
+import Button from "../common/Button";
 import { Typewriter } from "react-simple-typewriter";
 import { HashLink } from "react-router-hash-link";
 import { FiDownload } from "react-icons/fi";

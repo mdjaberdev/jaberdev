@@ -1,10 +1,10 @@
 import React from "react";
-import Container from "../Container";
+import Container from "../common/Container";
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { Link } from "react-router-dom";
-import Logo from "../Logo";
+import Logo from "../common/Logo";
 
 const Footer = () => {
   const whatsappNumber = "8801811956107";

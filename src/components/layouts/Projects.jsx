@@ -1,12 +1,12 @@
 import React from "react";
-import Container from "../Container";
+import Container from "../common/Container";
 import orebi from "../../assets/orebi.png";
 import portfolio from "../../assets/portfolio.png";
 import cabbage from "../../assets/cabbage.PNG";
 import creative from "../../assets/creative.png";
 import lime from "../../assets/lime.png";
 import nirvoya from "../../assets/nirvoya.png";
-import Images from "../Images";
+import Images from "../common/Images";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
 
