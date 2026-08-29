@@ -4,7 +4,8 @@ import RootLayouts from './components/layouts/RootLayouts'
 import ReactLenis from 'lenis/react';
 
 import { Suspense, lazy } from 'react';
-import Loading from './components/Loading';
+import Loading from './components/common/Loading';
+import CustomCursor from './components/common/CustomCursor';
 const Home = lazy(() => import("/src/components/pages/Home"));
 
 function App () {
@@ -14,6 +15,7 @@ function App () {
         root
         options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}
       >
+        <CustomCursor />
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="/" element={<RootLayouts />}>
