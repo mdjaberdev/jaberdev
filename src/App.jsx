@@ -6,6 +6,7 @@ import ReactLenis from 'lenis/react';
 import { Suspense, lazy } from 'react';
 import Loading from './components/common/Loading';
 import CustomCursor from './components/common/CustomCursor';
+import Error from './components/pages/Error';
 const Home = lazy(() => import("/src/components/pages/Home"));
 
 function App () {
@@ -21,6 +22,7 @@ function App () {
             <Route path="/" element={<RootLayouts />}>
               <Route index element={<Home />} />
             </Route>
+            <Route path='*' element={<Error />} />
           </Routes>
         </Suspense>
       </ReactLenis>
