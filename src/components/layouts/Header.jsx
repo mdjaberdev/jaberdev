@@ -83,7 +83,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="w-9 h-9 rounded-xl bg-slate-200 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-all"
+              className="w-9 h-9 rounded-xl bg-slate-200 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-300/60 dark:hover:bg-[#FE9A00]/10 hover:border-[#FE9A00]/30 transition-all duration-300 text-lg shadow-inner"
             >
               <BsGithub />
             </a>
@@ -92,7 +92,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="w-9 h-9 rounded-xl bg-slate-200 dark:bg-slate-900/40 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:text-[#0077B5] transition-all"
+              className="w-9 h-9 rounded-xl bg-slate-200 dark:bg-slate-900/50 border border-slate-300 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-400 hover:text-[#0077B5] hover:bg-[#0077B5]/10 hover:border-[#0077B5]/30 transition-all duration-300 text-lg shadow-inner"
             >
               <FaLinkedin />
             </a>
