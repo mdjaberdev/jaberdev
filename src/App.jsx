@@ -1,15 +1,15 @@
-import './App.css'
-import { Routes , Route } from 'react-router-dom'
-import RootLayouts from './components/layouts/RootLayouts'
-import ReactLenis from 'lenis/react';
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import RootLayouts from "./components/layouts/RootLayouts";
+import ReactLenis from "lenis/react";
 
-import { Suspense, lazy } from 'react';
-import Loading from './components/common/Loading';
-import CustomCursor from './components/common/CustomCursor';
-import Error from './components/pages/Error';
+import { Suspense, lazy } from "react";
+import Loading from "./components/common/Loading";
+import CustomCursor from "./components/common/CustomCursor";
 const Home = lazy(() => import("/src/components/pages/Home"));
+const Error = lazy(() => import("/src/components/pages/Error"));
 
-function App () {
+function App() {
   return (
     <>
       <ReactLenis
@@ -22,7 +22,7 @@ function App () {
             <Route path="/" element={<RootLayouts />}>
               <Route index element={<Home />} />
             </Route>
-            <Route path='*' element={<Error />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </Suspense>
       </ReactLenis>
@@ -30,6 +30,4 @@ function App () {
   );
 }
 
-export default App
-
-
+export default App;
